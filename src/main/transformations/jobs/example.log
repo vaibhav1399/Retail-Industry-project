@@ -1,0 +1,1712 @@
+2024-06-24 19:11:48,521 - INFO - List of Buckets: [{'Name': 'youtube-project-testing-vaibhav', 'CreationDate': datetime.datetime(2024, 4, 17, 6, 2, 38, tzinfo=tzutc())}]
+2024-06-24 19:11:48,539 - INFO - dynamically statement created: select distinct file_name from youtube_project.product_staging_table where file_name in ('india_companies.csv', 'movie_review1.csv', 'newstd.csv') and status='I'  
+2024-06-24 19:11:48,541 - INFO - No record Match
+2024-06-24 19:11:49,294 - INFO - Total files available in folder 'sales_data/' of bucket 'youtube-project-testing-vaibhav': {'ResponseMetadata': {'RequestId': 'ZZAZM4GR8QKPS9AK', 'HostId': 'w/H0GKl2Xz2QkFY6MFLq/kh5+NRmBhU9dNZP8LDOJcVBrgg5JUW4/iQVFyKo3is98KaF+Dk+jtKSYtB8TtO75w==', 'HTTPStatusCode': 200, 'HTTPHeaders': {'x-amz-id-2': 'w/H0GKl2Xz2QkFY6MFLq/kh5+NRmBhU9dNZP8LDOJcVBrgg5JUW4/iQVFyKo3is98KaF+Dk+jtKSYtB8TtO75w==', 'x-amz-request-id': 'ZZAZM4GR8QKPS9AK', 'date': 'Mon, 24 Jun 2024 13:41:51 GMT', 'x-amz-bucket-region': 'ap-south-1', 'content-type': 'application/xml', 'transfer-encoding': 'chunked', 'server': 'AmazonS3'}, 'RetryAttempts': 1}, 'IsTruncated': False, 'Contents': [{'Key': 'sales_data/', 'LastModified': datetime.datetime(2024, 6, 24, 12, 25, 37, tzinfo=tzutc()), 'ETag': '"d41d8cd98f00b204e9800998ecf8427e"', 'Size': 0, 'StorageClass': 'STANDARD'}, {'Key': 'sales_data/Multi_line_correct.json', 'LastModified': datetime.datetime(2024, 6, 24, 12, 33, 29, tzinfo=tzutc()), 'ETag': '"39ae69058eec376ea75e4994e9cdc0c0"', 'Size': 314, 'StorageClass': 'STANDARD'}, {'Key': 'sales_data/Multi_line_incorrect.json', 'LastModified': datetime.datetime(2024, 6, 24, 12, 33, 29, tzinfo=tzutc()), 'ETag': '"25ead52c8748864d8eafb1d290e7fedb"', 'Size': 306, 'StorageClass': 'STANDARD'}, {'Key': 'sales_data/india_companies.csv', 'LastModified': datetime.datetime(2024, 6, 24, 12, 33, 28, tzinfo=tzutc()), 'ETag': '"8c426dfc339fb178a70ea79bb71d98cb"', 'Size': 6163, 'StorageClass': 'STANDARD'}, {'Key': 'sales_data/movie_review1.csv', 'LastModified': datetime.datetime(2024, 6, 24, 12, 33, 29, tzinfo=tzutc()), 'ETag': '"11da0808edb83e197b57739ab04a2520"', 'Size': 1043, 'StorageClass': 'STANDARD'}, {'Key': 'sales_data/newstd.csv', 'LastModified': datetime.datetime(2024, 6, 24, 12, 33, 29, tzinfo=tzutc()), 'ETag': '"5b2054a51fbe07764697add8d1a2fb00"', 'Size': 76, 'StorageClass': 'STANDARD'}], 'Name': 'youtube-project-testing-vaibhav', 'Prefix': 'sales_data/', 'MaxKeys': 1000, 'EncodingType': 'url', 'KeyCount': 6}
+2024-06-24 19:11:49,297 - INFO - Absolute path on S3 Bucket for csv file ['s3://youtube-project-testing-vaibhav/sales_data/Multi_line_correct.json', 's3://youtube-project-testing-vaibhav/sales_data/Multi_line_incorrect.json', 's3://youtube-project-testing-vaibhav/sales_data/india_companies.csv', 's3://youtube-project-testing-vaibhav/sales_data/movie_review1.csv', 's3://youtube-project-testing-vaibhav/sales_data/newstd.csv'] 
+2024-06-24 19:11:49,299 - INFO - File path available on s3 under youtube-project-testing-vaibhav bucket and folder name is ['sales_data/Multi_line_correct.json', 'sales_data/Multi_line_incorrect.json', 'sales_data/india_companies.csv', 'sales_data/movie_review1.csv', 'sales_data/newstd.csv']
+2024-06-24 19:11:49,299 - INFO - Running download files for these files ['sales_data/Multi_line_correct.json', 'sales_data/Multi_line_incorrect.json', 'sales_data/india_companies.csv', 'sales_data/movie_review1.csv', 'sales_data/newstd.csv']
+2024-06-24 19:11:49,299 - INFO - File name Multi_line_correct.json 
+2024-06-24 19:11:49,445 - INFO - File name Multi_line_incorrect.json 
+2024-06-24 19:11:49,556 - INFO - File name india_companies.csv 
+2024-06-24 19:11:49,675 - INFO - File name movie_review1.csv 
+2024-06-24 19:11:49,769 - INFO - File name newstd.csv 
+2024-06-24 19:11:49,840 - INFO - List of files present at my local directory after download ['india_companies.csv', 'movie_review1.csv', 'Multi_line_correct.json', 'Multi_line_incorrect.json', 'newstd.csv']
+2024-06-24 19:11:49,840 - INFO - ************** Listing the File ***********************
+2024-06-24 19:11:49,840 - INFO - List of csv files that needs to be processed ['C:\\Users\\hp\\Documents\\data_engineering\\spark_data\\file_from_s3\\india_companies.csv', 'C:\\Users\\hp\\Documents\\data_engineering\\spark_data\\file_from_s3\\movie_review1.csv', 'C:\\Users\\hp\\Documents\\data_engineering\\spark_data\\file_from_s3\\newstd.csv']
+2024-06-24 19:11:49,840 - INFO - *************** Creating Spark Session ********************
+2024-06-24 19:11:52,863 - INFO - spark session <pyspark.sql.session.SparkSession object at 0x000002BA693B9250>
+2024-06-24 19:11:52,863 - INFO - ******************** Spark Session Created *************************
+2024-06-24 19:11:52,871 - INFO - Closing down clientserver connection
+2024-06-24 19:12:15,415 - DEBUG - Changing event name from creating-client-class.iot-data to creating-client-class.iot-data-plane
+2024-06-24 19:12:15,416 - DEBUG - Changing event name from before-call.apigateway to before-call.api-gateway
+2024-06-24 19:12:15,417 - DEBUG - Changing event name from request-created.machinelearning.Predict to request-created.machine-learning.Predict
+2024-06-24 19:12:15,418 - DEBUG - Changing event name from before-parameter-build.autoscaling.CreateLaunchConfiguration to before-parameter-build.auto-scaling.CreateLaunchConfiguration
+2024-06-24 19:12:15,418 - DEBUG - Changing event name from before-parameter-build.route53 to before-parameter-build.route-53
+2024-06-24 19:12:15,418 - DEBUG - Changing event name from request-created.cloudsearchdomain.Search to request-created.cloudsearch-domain.Search
+2024-06-24 19:12:15,419 - DEBUG - Changing event name from docs.*.autoscaling.CreateLaunchConfiguration.complete-section to docs.*.auto-scaling.CreateLaunchConfiguration.complete-section
+2024-06-24 19:12:15,420 - DEBUG - Changing event name from before-parameter-build.logs.CreateExportTask to before-parameter-build.cloudwatch-logs.CreateExportTask
+2024-06-24 19:12:15,420 - DEBUG - Changing event name from docs.*.logs.CreateExportTask.complete-section to docs.*.cloudwatch-logs.CreateExportTask.complete-section
+2024-06-24 19:12:15,420 - DEBUG - Changing event name from before-parameter-build.cloudsearchdomain.Search to before-parameter-build.cloudsearch-domain.Search
+2024-06-24 19:12:15,420 - DEBUG - Changing event name from docs.*.cloudsearchdomain.Search.complete-section to docs.*.cloudsearch-domain.Search.complete-section
+2024-06-24 19:12:15,434 - DEBUG - Loading JSON file: C:\Users\hp\PycharmProjects\youtube_ideas\youtube_de_project1\vaibhav-venv\Lib\site-packages\botocore\data\endpoints.json
+2024-06-24 19:12:15,456 - DEBUG - Loading JSON file: C:\Users\hp\PycharmProjects\youtube_ideas\youtube_de_project1\vaibhav-venv\Lib\site-packages\botocore\data\sdk-default-configuration.json
+2024-06-24 19:12:15,456 - DEBUG - Event choose-service-name: calling handler <function handle_service_name_alias at 0x000002659C5677E0>
+2024-06-24 19:12:15,496 - DEBUG - Loading JSON file: C:\Users\hp\PycharmProjects\youtube_ideas\youtube_de_project1\vaibhav-venv\Lib\site-packages\botocore\data\s3\2006-03-01\service-2.json.gz
+2024-06-24 19:12:15,540 - DEBUG - Loading JSON file: C:\Users\hp\PycharmProjects\youtube_ideas\youtube_de_project1\vaibhav-venv\Lib\site-packages\botocore\data\s3\2006-03-01\endpoint-rule-set-1.json.gz
+2024-06-24 19:12:15,544 - DEBUG - Loading JSON file: C:\Users\hp\PycharmProjects\youtube_ideas\youtube_de_project1\vaibhav-venv\Lib\site-packages\botocore\data\partitions.json
+2024-06-24 19:12:15,546 - DEBUG - Event creating-client-class.s3: calling handler <function add_generate_presigned_post at 0x000002659C484FE0>
+2024-06-24 19:12:15,546 - DEBUG - Event creating-client-class.s3: calling handler <function lazy_call.<locals>._handler at 0x000002659C6C9300>
+2024-06-24 19:12:15,573 - DEBUG - Event creating-client-class.s3: calling handler <function add_generate_presigned_url at 0x000002659C484D60>
+2024-06-24 19:12:15,573 - DEBUG - Looking for endpoint for s3 via: environment_service
+2024-06-24 19:12:15,574 - DEBUG - Looking for endpoint for s3 via: environment_global
+2024-06-24 19:12:15,574 - DEBUG - Looking for endpoint for s3 via: config_service
+2024-06-24 19:12:15,574 - DEBUG - Looking for endpoint for s3 via: config_global
+2024-06-24 19:12:15,574 - DEBUG - No configured endpoint found.
+2024-06-24 19:12:15,575 - DEBUG - Setting s3 timeout as (60, 60)
+2024-06-24 19:12:15,579 - DEBUG - Loading JSON file: C:\Users\hp\PycharmProjects\youtube_ideas\youtube_de_project1\vaibhav-venv\Lib\site-packages\botocore\data\_retry.json
+2024-06-24 19:12:15,580 - DEBUG - Registering retry handlers for service: s3
+2024-06-24 19:12:15,580 - DEBUG - Registering S3 region redirector handler
+2024-06-24 19:12:15,580 - DEBUG - Registering S3Express Identity Resolver
+2024-06-24 19:12:15,581 - DEBUG - Event before-parameter-build.s3.ListBuckets: calling handler <function validate_bucket_name at 0x000002659C5951C0>
+2024-06-24 19:12:15,581 - DEBUG - Event before-parameter-build.s3.ListBuckets: calling handler <function remove_bucket_from_url_paths_from_model at 0x000002659C597380>
+2024-06-24 19:12:15,581 - DEBUG - Event before-parameter-build.s3.ListBuckets: calling handler <bound method S3RegionRedirectorv2.annotate_request_context of <botocore.utils.S3RegionRedirectorv2 object at 0x000002659E0331D0>>
+2024-06-24 19:12:15,581 - DEBUG - Event before-parameter-build.s3.ListBuckets: calling handler <bound method ClientCreator._inject_s3_input_parameters of <botocore.client.ClientCreator object at 0x000002659DAC6890>>
+2024-06-24 19:12:15,581 - DEBUG - Event before-parameter-build.s3.ListBuckets: calling handler <function generate_idempotent_uuid at 0x000002659C594FE0>
+2024-06-24 19:12:15,581 - DEBUG - Event before-endpoint-resolution.s3: calling handler <function customize_endpoint_resolver_builtins at 0x000002659C597560>
+2024-06-24 19:12:15,581 - DEBUG - Event before-endpoint-resolution.s3: calling handler <bound method S3RegionRedirectorv2.redirect_from_cache of <botocore.utils.S3RegionRedirectorv2 object at 0x000002659E0331D0>>
+2024-06-24 19:12:15,581 - DEBUG - Calling endpoint provider with parameters: {'Region': 'us-east-1', 'UseFIPS': False, 'UseDualStack': False, 'ForcePathStyle': False, 'Accelerate': False, 'UseGlobalEndpoint': True, 'DisableMultiRegionAccessPoints': False, 'UseArnRegion': True}
+2024-06-24 19:12:15,581 - DEBUG - Endpoint provider result: https://s3.amazonaws.com
+2024-06-24 19:12:15,582 - DEBUG - Selecting from endpoint provider's list of auth schemes: "sigv4". User selected auth scheme is: "None"
+2024-06-24 19:12:15,582 - DEBUG - Selected auth type "v4" as "v4" with signing context params: {'region': 'us-east-1', 'signing_name': 's3', 'disableDoubleEncoding': True}
+2024-06-24 19:12:15,582 - DEBUG - Event before-call.s3.ListBuckets: calling handler <function add_expect_header at 0x000002659C595580>
+2024-06-24 19:12:15,582 - DEBUG - Event before-call.s3.ListBuckets: calling handler <bound method S3ExpressIdentityResolver.apply_signing_cache_key of <botocore.utils.S3ExpressIdentityResolver object at 0x000002659DBB8D10>>
+2024-06-24 19:12:15,582 - DEBUG - Event before-call.s3.ListBuckets: calling handler <function add_recursion_detection_header at 0x000002659C567920>
+2024-06-24 19:12:15,582 - DEBUG - Event before-call.s3.ListBuckets: calling handler <function inject_api_version_header_if_needed at 0x000002659C596AC0>
+2024-06-24 19:12:15,582 - DEBUG - Making request for OperationModel(name=ListBuckets) with params: {'url_path': '/', 'query_string': '', 'method': 'GET', 'headers': {'User-Agent': 'Boto3/1.34.131 md/Botocore#1.34.131 ua/2.0 os/windows#10 md/arch#amd64 lang/python#3.11.6 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.34.131'}, 'body': b'', 'url': 'https://s3.amazonaws.com/', 'context': {'client_region': 'us-east-1', 'client_config': <botocore.config.Config object at 0x000002659E01B790>, 'has_streaming_input': False, 'auth_type': 'v4', 's3_redirect': {'redirected': False, 'bucket': None, 'params': {}}, 'input_params': {}, 'signing': {'region': 'us-east-1', 'signing_name': 's3', 'disableDoubleEncoding': True}, 'endpoint_properties': {'authSchemes': [{'disableDoubleEncoding': True, 'name': 'sigv4', 'signingName': 's3', 'signingRegion': 'us-east-1'}]}}}
+2024-06-24 19:12:15,582 - DEBUG - Event request-created.s3.ListBuckets: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x000002659E01B750>>
+2024-06-24 19:12:15,582 - DEBUG - Event choose-signer.s3.ListBuckets: calling handler <bound method ClientCreator._default_s3_presign_to_sigv2 of <botocore.client.ClientCreator object at 0x000002659DAC6890>>
+2024-06-24 19:12:15,582 - DEBUG - Event choose-signer.s3.ListBuckets: calling handler <function set_operation_specific_signer at 0x000002659C594EA0>
+2024-06-24 19:12:15,582 - DEBUG - Event before-sign.s3.ListBuckets: calling handler <function remove_arn_from_signing_path at 0x000002659C5974C0>
+2024-06-24 19:12:15,582 - DEBUG - Event before-sign.s3.ListBuckets: calling handler <bound method S3ExpressIdentityResolver.resolve_s3express_identity of <botocore.utils.S3ExpressIdentityResolver object at 0x000002659DBB8D10>>
+2024-06-24 19:12:15,583 - DEBUG - Calculating signature using v4 auth.
+2024-06-24 19:12:15,583 - DEBUG - CanonicalRequest:
+GET
+/
+
+host:s3.amazonaws.com
+x-amz-content-sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+x-amz-date:20240624T134215Z
+
+host;x-amz-content-sha256;x-amz-date
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+2024-06-24 19:12:15,583 - DEBUG - StringToSign:
+AWS4-HMAC-SHA256
+20240624T134215Z
+20240624/us-east-1/s3/aws4_request
+2986ce88637d8607fb508ba01a9afca39907f0dfcd1401837cc7fc9883d7e365
+2024-06-24 19:12:15,583 - DEBUG - Signature:
+5f6a6a80e0eaa4ae86bdb2884b8ed46b52a49994787253e15900e3ae7ac59f4e
+2024-06-24 19:12:15,583 - DEBUG - Event request-created.s3.ListBuckets: calling handler <function add_retry_headers at 0x000002659C5972E0>
+2024-06-24 19:12:15,583 - DEBUG - Sending http request: <AWSPreparedRequest stream_output=False, method=GET, url=https://s3.amazonaws.com/, headers={'User-Agent': b'Boto3/1.34.131 md/Botocore#1.34.131 ua/2.0 os/windows#10 md/arch#amd64 lang/python#3.11.6 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.34.131', 'X-Amz-Date': b'20240624T134215Z', 'X-Amz-Content-SHA256': b'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIA2UC3A4V7JS25LG77/20240624/us-east-1/s3/aws4_request, SignedHeaders=host;x-amz-content-sha256;x-amz-date, Signature=5f6a6a80e0eaa4ae86bdb2884b8ed46b52a49994787253e15900e3ae7ac59f4e', 'amz-sdk-invocation-id': b'e563dd78-23bf-401f-aa90-db97f2f4dada', 'amz-sdk-request': b'attempt=1'}>
+2024-06-24 19:12:15,584 - DEBUG - Certificate path: C:\Users\hp\PycharmProjects\youtube_ideas\youtube_de_project1\vaibhav-venv\Lib\site-packages\botocore\cacert.pem
+2024-06-24 19:12:15,584 - DEBUG - Starting new HTTPS connection (1): s3.amazonaws.com:443
+2024-06-24 19:12:16,529 - DEBUG - https://s3.amazonaws.com:443 "GET / HTTP/11" 200 None
+2024-06-24 19:12:16,530 - DEBUG - Response headers: {'x-amz-id-2': 'SdXRVwHR06ixNvHd2qzurTE37hiJ7nwyxLZmSCmSr02UTIc3J58Q/KAFLrOHBsx21GcJQ2id0xE=', 'x-amz-request-id': 'RD7G6EF1PZB3HAQE', 'Date': 'Mon, 24 Jun 2024 13:42:18 GMT', 'Content-Type': 'application/xml', 'Transfer-Encoding': 'chunked', 'Server': 'AmazonS3'}
+2024-06-24 19:12:16,530 - DEBUG - Response body:
+b'<?xml version="1.0" encoding="UTF-8"?>\n<ListAllMyBucketsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Owner><ID>fa65ce7ad8882b7375f557dbca5611b59e6adebc8b7f5edaa626904a2d91b768</ID><DisplayName>vaibhavdwivedi201</DisplayName></Owner><Buckets><Bucket><Name>youtube-project-testing-vaibhav</Name><CreationDate>2024-04-17T06:02:38.000Z</CreationDate></Bucket></Buckets></ListAllMyBucketsResult>'
+2024-06-24 19:12:16,532 - DEBUG - Event needs-retry.s3.ListBuckets: calling handler <botocore.retryhandler.RetryHandler object at 0x000002659C0E5050>
+2024-06-24 19:12:16,532 - DEBUG - No retry needed.
+2024-06-24 19:12:16,532 - DEBUG - Event needs-retry.s3.ListBuckets: calling handler <bound method S3RegionRedirectorv2.redirect_from_error of <botocore.utils.S3RegionRedirectorv2 object at 0x000002659E0331D0>>
+2024-06-24 19:12:16,532 - INFO - List of Buckets: [{'Name': 'youtube-project-testing-vaibhav', 'CreationDate': datetime.datetime(2024, 4, 17, 6, 2, 38, tzinfo=tzutc())}]
+2024-06-24 19:12:16,548 - INFO - dynamically statement created: select distinct file_name from youtube_project.product_staging_table where file_name in ('india_companies.csv', 'movie_review1.csv', 'newstd.csv') and status='I'  
+2024-06-24 19:12:16,550 - INFO - No record Match
+2024-06-24 19:12:16,550 - DEBUG - Event before-parameter-build.s3.ListObjectsV2: calling handler <function set_list_objects_encoding_type_url at 0x000002659C596660>
+2024-06-24 19:12:16,550 - DEBUG - Event before-parameter-build.s3.ListObjectsV2: calling handler <function validate_bucket_name at 0x000002659C5951C0>
+2024-06-24 19:12:16,550 - DEBUG - Event before-parameter-build.s3.ListObjectsV2: calling handler <function remove_bucket_from_url_paths_from_model at 0x000002659C597380>
+2024-06-24 19:12:16,550 - DEBUG - Event before-parameter-build.s3.ListObjectsV2: calling handler <bound method S3RegionRedirectorv2.annotate_request_context of <botocore.utils.S3RegionRedirectorv2 object at 0x000002659E0331D0>>
+2024-06-24 19:12:16,550 - DEBUG - Event before-parameter-build.s3.ListObjectsV2: calling handler <bound method ClientCreator._inject_s3_input_parameters of <botocore.client.ClientCreator object at 0x000002659DAC6890>>
+2024-06-24 19:12:16,550 - DEBUG - Event before-parameter-build.s3.ListObjectsV2: calling handler <function generate_idempotent_uuid at 0x000002659C594FE0>
+2024-06-24 19:12:16,551 - DEBUG - Event before-endpoint-resolution.s3: calling handler <function customize_endpoint_resolver_builtins at 0x000002659C597560>
+2024-06-24 19:12:16,551 - DEBUG - Event before-endpoint-resolution.s3: calling handler <bound method S3RegionRedirectorv2.redirect_from_cache of <botocore.utils.S3RegionRedirectorv2 object at 0x000002659E0331D0>>
+2024-06-24 19:12:16,551 - DEBUG - Calling endpoint provider with parameters: {'Bucket': 'youtube-project-testing-vaibhav', 'Region': 'us-east-1', 'UseFIPS': False, 'UseDualStack': False, 'ForcePathStyle': False, 'Accelerate': False, 'UseGlobalEndpoint': True, 'Prefix': 'sales_data/', 'DisableMultiRegionAccessPoints': False, 'UseArnRegion': True}
+2024-06-24 19:12:16,551 - DEBUG - Endpoint provider result: https://youtube-project-testing-vaibhav.s3.amazonaws.com
+2024-06-24 19:12:16,551 - DEBUG - Selecting from endpoint provider's list of auth schemes: "sigv4". User selected auth scheme is: "None"
+2024-06-24 19:12:16,551 - DEBUG - Selected auth type "v4" as "v4" with signing context params: {'region': 'us-east-1', 'signing_name': 's3', 'disableDoubleEncoding': True}
+2024-06-24 19:12:16,551 - DEBUG - Event before-call.s3.ListObjectsV2: calling handler <function add_expect_header at 0x000002659C595580>
+2024-06-24 19:12:16,551 - DEBUG - Event before-call.s3.ListObjectsV2: calling handler <bound method S3ExpressIdentityResolver.apply_signing_cache_key of <botocore.utils.S3ExpressIdentityResolver object at 0x000002659DBB8D10>>
+2024-06-24 19:12:16,551 - DEBUG - Event before-call.s3.ListObjectsV2: calling handler <function add_recursion_detection_header at 0x000002659C567920>
+2024-06-24 19:12:16,551 - DEBUG - Event before-call.s3.ListObjectsV2: calling handler <function inject_api_version_header_if_needed at 0x000002659C596AC0>
+2024-06-24 19:12:16,552 - DEBUG - Making request for OperationModel(name=ListObjectsV2) with params: {'url_path': '?list-type=2', 'query_string': {'prefix': 'sales_data/', 'encoding-type': 'url'}, 'method': 'GET', 'headers': {'User-Agent': 'Boto3/1.34.131 md/Botocore#1.34.131 ua/2.0 os/windows#10 md/arch#amd64 lang/python#3.11.6 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.34.131'}, 'body': b'', 'auth_path': '/youtube-project-testing-vaibhav/', 'url': 'https://youtube-project-testing-vaibhav.s3.amazonaws.com/?list-type=2&prefix=sales_data%2F&encoding-type=url', 'context': {'client_region': 'us-east-1', 'client_config': <botocore.config.Config object at 0x000002659E01B790>, 'has_streaming_input': False, 'auth_type': 'v4', 'encoding_type_auto_set': True, 's3_redirect': {'redirected': False, 'bucket': 'youtube-project-testing-vaibhav', 'params': {'Bucket': 'youtube-project-testing-vaibhav', 'Prefix': 'sales_data/', 'EncodingType': 'url'}}, 'input_params': {'Bucket': 'youtube-project-testing-vaibhav', 'Prefix': 'sales_data/'}, 'signing': {'region': 'us-east-1', 'signing_name': 's3', 'disableDoubleEncoding': True}, 'endpoint_properties': {'authSchemes': [{'disableDoubleEncoding': True, 'name': 'sigv4', 'signingName': 's3', 'signingRegion': 'us-east-1'}]}}}
+2024-06-24 19:12:16,552 - DEBUG - Event request-created.s3.ListObjectsV2: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x000002659E01B750>>
+2024-06-24 19:12:16,552 - DEBUG - Event choose-signer.s3.ListObjectsV2: calling handler <bound method ClientCreator._default_s3_presign_to_sigv2 of <botocore.client.ClientCreator object at 0x000002659DAC6890>>
+2024-06-24 19:12:16,552 - DEBUG - Event choose-signer.s3.ListObjectsV2: calling handler <function set_operation_specific_signer at 0x000002659C594EA0>
+2024-06-24 19:12:16,552 - DEBUG - Event before-sign.s3.ListObjectsV2: calling handler <function remove_arn_from_signing_path at 0x000002659C5974C0>
+2024-06-24 19:12:16,552 - DEBUG - Event before-sign.s3.ListObjectsV2: calling handler <bound method S3ExpressIdentityResolver.resolve_s3express_identity of <botocore.utils.S3ExpressIdentityResolver object at 0x000002659DBB8D10>>
+2024-06-24 19:12:16,552 - DEBUG - Calculating signature using v4 auth.
+2024-06-24 19:12:16,552 - DEBUG - CanonicalRequest:
+GET
+/
+encoding-type=url&list-type=2&prefix=sales_data%2F
+host:youtube-project-testing-vaibhav.s3.amazonaws.com
+x-amz-content-sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+x-amz-date:20240624T134216Z
+
+host;x-amz-content-sha256;x-amz-date
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+2024-06-24 19:12:16,552 - DEBUG - StringToSign:
+AWS4-HMAC-SHA256
+20240624T134216Z
+20240624/us-east-1/s3/aws4_request
+4d1ab91765177274572552c9a31e663912e6d7206a233cdb61a1431870f3e3cc
+2024-06-24 19:12:16,552 - DEBUG - Signature:
+2092b35558945b75ce28f2b8a0cfcd58cbf78f622a2707a7e1bf7cea071c82cd
+2024-06-24 19:12:16,552 - DEBUG - Event request-created.s3.ListObjectsV2: calling handler <function add_retry_headers at 0x000002659C5972E0>
+2024-06-24 19:12:16,552 - DEBUG - Sending http request: <AWSPreparedRequest stream_output=False, method=GET, url=https://youtube-project-testing-vaibhav.s3.amazonaws.com/?list-type=2&prefix=sales_data%2F&encoding-type=url, headers={'User-Agent': b'Boto3/1.34.131 md/Botocore#1.34.131 ua/2.0 os/windows#10 md/arch#amd64 lang/python#3.11.6 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.34.131', 'X-Amz-Date': b'20240624T134216Z', 'X-Amz-Content-SHA256': b'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIA2UC3A4V7JS25LG77/20240624/us-east-1/s3/aws4_request, SignedHeaders=host;x-amz-content-sha256;x-amz-date, Signature=2092b35558945b75ce28f2b8a0cfcd58cbf78f622a2707a7e1bf7cea071c82cd', 'amz-sdk-invocation-id': b'6b9c546d-dd35-47bc-8714-276544aa3858', 'amz-sdk-request': b'attempt=1'}>
+2024-06-24 19:12:16,553 - DEBUG - Certificate path: C:\Users\hp\PycharmProjects\youtube_ideas\youtube_de_project1\vaibhav-venv\Lib\site-packages\botocore\cacert.pem
+2024-06-24 19:12:16,553 - DEBUG - Starting new HTTPS connection (1): youtube-project-testing-vaibhav.s3.amazonaws.com:443
+2024-06-24 19:12:16,887 - DEBUG - https://youtube-project-testing-vaibhav.s3.amazonaws.com:443 "GET /?list-type=2&prefix=sales_data%2F&encoding-type=url HTTP/11" 400 None
+2024-06-24 19:12:16,888 - DEBUG - Response headers: {'x-amz-bucket-region': 'ap-south-1', 'x-amz-request-id': 'SG3M79T8QTP0YJMP', 'x-amz-id-2': 'Os90bkg21oTHWGYn3LjHPW7sRl5vWbnNTFzZx+ucQjaHHuUlhSMhAkRUT7pKkmZvU8S/9WQ8h3c=', 'Content-Type': 'application/xml', 'Transfer-Encoding': 'chunked', 'Date': 'Mon, 24 Jun 2024 13:42:17 GMT', 'Server': 'AmazonS3', 'Connection': 'close'}
+2024-06-24 19:12:16,888 - DEBUG - Response body:
+b'<?xml version="1.0" encoding="UTF-8"?>\n<Error><Code>AuthorizationHeaderMalformed</Code><Message>The authorization header is malformed; the region \'us-east-1\' is wrong; expecting \'ap-south-1\'</Message><Region>ap-south-1</Region><RequestId>SG3M79T8QTP0YJMP</RequestId><HostId>Os90bkg21oTHWGYn3LjHPW7sRl5vWbnNTFzZx+ucQjaHHuUlhSMhAkRUT7pKkmZvU8S/9WQ8h3c=</HostId></Error>'
+2024-06-24 19:12:16,892 - DEBUG - Event needs-retry.s3.ListObjectsV2: calling handler <botocore.retryhandler.RetryHandler object at 0x000002659C0E5050>
+2024-06-24 19:12:16,892 - DEBUG - No retry needed.
+2024-06-24 19:12:16,892 - DEBUG - Event needs-retry.s3.ListObjectsV2: calling handler <bound method S3RegionRedirectorv2.redirect_from_error of <botocore.utils.S3RegionRedirectorv2 object at 0x000002659E0331D0>>
+2024-06-24 19:12:16,892 - DEBUG - S3 client configured for region us-east-1 but the bucket youtube-project-testing-vaibhav is in region ap-south-1; Please configure the proper region to avoid multiple unnecessary redirects and signing attempts.
+2024-06-24 19:12:16,892 - DEBUG - Event before-endpoint-resolution.s3: calling handler <function customize_endpoint_resolver_builtins at 0x000002659C597560>
+2024-06-24 19:12:16,892 - DEBUG - Event before-endpoint-resolution.s3: calling handler <bound method S3RegionRedirectorv2.redirect_from_cache of <botocore.utils.S3RegionRedirectorv2 object at 0x000002659E0331D0>>
+2024-06-24 19:12:16,892 - DEBUG - Calling endpoint provider with parameters: {'Bucket': 'youtube-project-testing-vaibhav', 'Region': 'ap-south-1', 'UseFIPS': False, 'UseDualStack': False, 'ForcePathStyle': False, 'Accelerate': False, 'UseGlobalEndpoint': True, 'Prefix': 'sales_data/', 'DisableMultiRegionAccessPoints': False, 'UseArnRegion': True}
+2024-06-24 19:12:16,893 - DEBUG - Endpoint provider result: https://youtube-project-testing-vaibhav.s3.ap-south-1.amazonaws.com
+2024-06-24 19:12:16,893 - DEBUG - Updating URI from https://youtube-project-testing-vaibhav.s3.amazonaws.com/?list-type=2&prefix=sales_data%2F&encoding-type=url to https://youtube-project-testing-vaibhav.s3.ap-south-1.amazonaws.com/?list-type=2&prefix=sales_data%2F&encoding-type=url
+2024-06-24 19:12:16,893 - DEBUG - Selecting from endpoint provider's list of auth schemes: "sigv4". User selected auth scheme is: "None"
+2024-06-24 19:12:16,893 - DEBUG - Selected auth type "v4" as "v4" with signing context params: {'region': 'ap-south-1', 'signing_name': 's3', 'disableDoubleEncoding': True}
+2024-06-24 19:12:16,893 - DEBUG - Response received to retry, sleeping for 0 seconds
+2024-06-24 19:12:16,896 - DEBUG - Event request-created.s3.ListObjectsV2: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x000002659E01B750>>
+2024-06-24 19:12:16,896 - DEBUG - Event choose-signer.s3.ListObjectsV2: calling handler <bound method ClientCreator._default_s3_presign_to_sigv2 of <botocore.client.ClientCreator object at 0x000002659DAC6890>>
+2024-06-24 19:12:16,896 - DEBUG - Event choose-signer.s3.ListObjectsV2: calling handler <function set_operation_specific_signer at 0x000002659C594EA0>
+2024-06-24 19:12:16,896 - DEBUG - Event before-sign.s3.ListObjectsV2: calling handler <function remove_arn_from_signing_path at 0x000002659C5974C0>
+2024-06-24 19:12:16,896 - DEBUG - Event before-sign.s3.ListObjectsV2: calling handler <bound method S3ExpressIdentityResolver.resolve_s3express_identity of <botocore.utils.S3ExpressIdentityResolver object at 0x000002659DBB8D10>>
+2024-06-24 19:12:16,896 - DEBUG - Calculating signature using v4 auth.
+2024-06-24 19:12:16,896 - DEBUG - CanonicalRequest:
+GET
+/
+encoding-type=url&list-type=2&prefix=sales_data%2F
+host:youtube-project-testing-vaibhav.s3.ap-south-1.amazonaws.com
+x-amz-content-sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+x-amz-date:20240624T134216Z
+
+host;x-amz-content-sha256;x-amz-date
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+2024-06-24 19:12:16,896 - DEBUG - StringToSign:
+AWS4-HMAC-SHA256
+20240624T134216Z
+20240624/ap-south-1/s3/aws4_request
+7b7a240abc310c8420747c92f0a30c6f1683b2af80464ab8049c19b1b22d2ffd
+2024-06-24 19:12:16,896 - DEBUG - Signature:
+4095af5b306e01d2e1f00471e0f685621ed32d6f7f02bd4a7d46358e4fba3b71
+2024-06-24 19:12:16,896 - DEBUG - Event request-created.s3.ListObjectsV2: calling handler <function add_retry_headers at 0x000002659C5972E0>
+2024-06-24 19:12:16,896 - DEBUG - Sending http request: <AWSPreparedRequest stream_output=False, method=GET, url=https://youtube-project-testing-vaibhav.s3.ap-south-1.amazonaws.com/?list-type=2&prefix=sales_data%2F&encoding-type=url, headers={'User-Agent': b'Boto3/1.34.131 md/Botocore#1.34.131 ua/2.0 os/windows#10 md/arch#amd64 lang/python#3.11.6 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.34.131', 'X-Amz-Date': b'20240624T134216Z', 'X-Amz-Content-SHA256': b'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIA2UC3A4V7JS25LG77/20240624/ap-south-1/s3/aws4_request, SignedHeaders=host;x-amz-content-sha256;x-amz-date, Signature=4095af5b306e01d2e1f00471e0f685621ed32d6f7f02bd4a7d46358e4fba3b71', 'amz-sdk-invocation-id': b'6b9c546d-dd35-47bc-8714-276544aa3858', 'amz-sdk-request': b'ttl=20240624T134317Z; attempt=2; max=5'}>
+2024-06-24 19:12:16,896 - DEBUG - Certificate path: C:\Users\hp\PycharmProjects\youtube_ideas\youtube_de_project1\vaibhav-venv\Lib\site-packages\botocore\cacert.pem
+2024-06-24 19:12:16,897 - DEBUG - Starting new HTTPS connection (1): youtube-project-testing-vaibhav.s3.ap-south-1.amazonaws.com:443
+2024-06-24 19:12:17,259 - DEBUG - https://youtube-project-testing-vaibhav.s3.ap-south-1.amazonaws.com:443 "GET /?list-type=2&prefix=sales_data%2F&encoding-type=url HTTP/11" 200 None
+2024-06-24 19:12:17,261 - DEBUG - Response headers: {'x-amz-id-2': 'Cn0PmqHef98v6SdZhmmV/IkhOUKm/c7iUbzkHAomEU1Iv4Jvy4Mhnxg1H2B0fiwXaNKU3q7JKGi7ldciP3djJg==', 'x-amz-request-id': 'SG3K16WS9VC80FC0', 'Date': 'Mon, 24 Jun 2024 13:42:19 GMT', 'x-amz-bucket-region': 'ap-south-1', 'Content-Type': 'application/xml', 'Transfer-Encoding': 'chunked', 'Server': 'AmazonS3'}
+2024-06-24 19:12:17,261 - DEBUG - Response body:
+b'<?xml version="1.0" encoding="UTF-8"?>\n<ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>youtube-project-testing-vaibhav</Name><Prefix>sales_data/</Prefix><KeyCount>6</KeyCount><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><Contents><Key>sales_data/</Key><LastModified>2024-06-24T12:25:37.000Z</LastModified><ETag>&quot;d41d8cd98f00b204e9800998ecf8427e&quot;</ETag><Size>0</Size><StorageClass>STANDARD</StorageClass></Contents><Contents><Key>sales_data/Multi_line_correct.json</Key><LastModified>2024-06-24T12:33:29.000Z</LastModified><ETag>&quot;39ae69058eec376ea75e4994e9cdc0c0&quot;</ETag><Size>314</Size><StorageClass>STANDARD</StorageClass></Contents><Contents><Key>sales_data/Multi_line_incorrect.json</Key><LastModified>2024-06-24T12:33:29.000Z</LastModified><ETag>&quot;25ead52c8748864d8eafb1d290e7fedb&quot;</ETag><Size>306</Size><StorageClass>STANDARD</StorageClass></Contents><Contents><Key>sales_data/india_companies.csv</Key><LastModified>2024-06-24T12:33:28.000Z</LastModified><ETag>&quot;8c426dfc339fb178a70ea79bb71d98cb&quot;</ETag><Size>6163</Size><StorageClass>STANDARD</StorageClass></Contents><Contents><Key>sales_data/movie_review1.csv</Key><LastModified>2024-06-24T12:33:29.000Z</LastModified><ETag>&quot;11da0808edb83e197b57739ab04a2520&quot;</ETag><Size>1043</Size><StorageClass>STANDARD</StorageClass></Contents><Contents><Key>sales_data/newstd.csv</Key><LastModified>2024-06-24T12:33:29.000Z</LastModified><ETag>&quot;5b2054a51fbe07764697add8d1a2fb00&quot;</ETag><Size>76</Size><StorageClass>STANDARD</StorageClass></Contents></ListBucketResult>'
+2024-06-24 19:12:17,263 - DEBUG - Event needs-retry.s3.ListObjectsV2: calling handler <botocore.retryhandler.RetryHandler object at 0x000002659C0E5050>
+2024-06-24 19:12:17,263 - DEBUG - No retry needed.
+2024-06-24 19:12:17,263 - DEBUG - Event needs-retry.s3.ListObjectsV2: calling handler <bound method S3RegionRedirectorv2.redirect_from_error of <botocore.utils.S3RegionRedirectorv2 object at 0x000002659E0331D0>>
+2024-06-24 19:12:17,264 - DEBUG - S3 request was previously redirected, not redirecting.
+2024-06-24 19:12:17,264 - DEBUG - Event after-call.s3.ListObjectsV2: calling handler <function decode_list_object_v2 at 0x000002659C5967A0>
+2024-06-24 19:12:17,264 - INFO - Total files available in folder 'sales_data/' of bucket 'youtube-project-testing-vaibhav': {'ResponseMetadata': {'RequestId': 'SG3K16WS9VC80FC0', 'HostId': 'Cn0PmqHef98v6SdZhmmV/IkhOUKm/c7iUbzkHAomEU1Iv4Jvy4Mhnxg1H2B0fiwXaNKU3q7JKGi7ldciP3djJg==', 'HTTPStatusCode': 200, 'HTTPHeaders': {'x-amz-id-2': 'Cn0PmqHef98v6SdZhmmV/IkhOUKm/c7iUbzkHAomEU1Iv4Jvy4Mhnxg1H2B0fiwXaNKU3q7JKGi7ldciP3djJg==', 'x-amz-request-id': 'SG3K16WS9VC80FC0', 'date': 'Mon, 24 Jun 2024 13:42:19 GMT', 'x-amz-bucket-region': 'ap-south-1', 'content-type': 'application/xml', 'transfer-encoding': 'chunked', 'server': 'AmazonS3'}, 'RetryAttempts': 1}, 'IsTruncated': False, 'Contents': [{'Key': 'sales_data/', 'LastModified': datetime.datetime(2024, 6, 24, 12, 25, 37, tzinfo=tzutc()), 'ETag': '"d41d8cd98f00b204e9800998ecf8427e"', 'Size': 0, 'StorageClass': 'STANDARD'}, {'Key': 'sales_data/Multi_line_correct.json', 'LastModified': datetime.datetime(2024, 6, 24, 12, 33, 29, tzinfo=tzutc()), 'ETag': '"39ae69058eec376ea75e4994e9cdc0c0"', 'Size': 314, 'StorageClass': 'STANDARD'}, {'Key': 'sales_data/Multi_line_incorrect.json', 'LastModified': datetime.datetime(2024, 6, 24, 12, 33, 29, tzinfo=tzutc()), 'ETag': '"25ead52c8748864d8eafb1d290e7fedb"', 'Size': 306, 'StorageClass': 'STANDARD'}, {'Key': 'sales_data/india_companies.csv', 'LastModified': datetime.datetime(2024, 6, 24, 12, 33, 28, tzinfo=tzutc()), 'ETag': '"8c426dfc339fb178a70ea79bb71d98cb"', 'Size': 6163, 'StorageClass': 'STANDARD'}, {'Key': 'sales_data/movie_review1.csv', 'LastModified': datetime.datetime(2024, 6, 24, 12, 33, 29, tzinfo=tzutc()), 'ETag': '"11da0808edb83e197b57739ab04a2520"', 'Size': 1043, 'StorageClass': 'STANDARD'}, {'Key': 'sales_data/newstd.csv', 'LastModified': datetime.datetime(2024, 6, 24, 12, 33, 29, tzinfo=tzutc()), 'ETag': '"5b2054a51fbe07764697add8d1a2fb00"', 'Size': 76, 'StorageClass': 'STANDARD'}], 'Name': 'youtube-project-testing-vaibhav', 'Prefix': 'sales_data/', 'MaxKeys': 1000, 'EncodingType': 'url', 'KeyCount': 6}
+2024-06-24 19:12:17,264 - INFO - Absolute path on S3 Bucket for csv file ['s3://youtube-project-testing-vaibhav/sales_data/Multi_line_correct.json', 's3://youtube-project-testing-vaibhav/sales_data/Multi_line_incorrect.json', 's3://youtube-project-testing-vaibhav/sales_data/india_companies.csv', 's3://youtube-project-testing-vaibhav/sales_data/movie_review1.csv', 's3://youtube-project-testing-vaibhav/sales_data/newstd.csv'] 
+2024-06-24 19:12:17,266 - INFO - File path available on s3 under youtube-project-testing-vaibhav bucket and folder name is ['sales_data/Multi_line_correct.json', 'sales_data/Multi_line_incorrect.json', 'sales_data/india_companies.csv', 'sales_data/movie_review1.csv', 'sales_data/newstd.csv']
+2024-06-24 19:12:17,266 - INFO - Running download files for these files ['sales_data/Multi_line_correct.json', 'sales_data/Multi_line_incorrect.json', 'sales_data/india_companies.csv', 'sales_data/movie_review1.csv', 'sales_data/newstd.csv']
+2024-06-24 19:12:17,266 - INFO - File name Multi_line_correct.json 
+2024-06-24 19:12:17,266 - DEBUG - Opting out of CRT Transfer Manager. Preferred client: auto, CRT available: False, Instance Optimized: False.
+2024-06-24 19:12:17,266 - DEBUG - Using default client. pid: 18236, thread: 15628
+2024-06-24 19:12:17,266 - DEBUG - Acquiring 0
+2024-06-24 19:12:17,267 - DEBUG - DownloadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x000002659F3B1490>}) about to wait for the following futures []
+2024-06-24 19:12:17,267 - DEBUG - DownloadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x000002659F3B1490>}) done waiting for dependent futures
+2024-06-24 19:12:17,268 - DEBUG - Executing task DownloadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x000002659F3B1490>}) with kwargs {'client': <botocore.client.S3 object at 0x000002659C32B010>, 'config': <boto3.s3.transfer.TransferConfig object at 0x000002659DB9AED0>, 'osutil': <s3transfer.utils.OSUtils object at 0x000002659F38CCD0>, 'request_executor': <s3transfer.futures.BoundedExecutor object at 0x000002659F376490>, 'transfer_future': <s3transfer.futures.TransferFuture object at 0x000002659F3B1490>, 'io_executor': <s3transfer.futures.BoundedExecutor object at 0x000002659F3B0F50>}
+2024-06-24 19:12:17,268 - DEBUG - Event before-parameter-build.s3.HeadObject: calling handler <function sse_md5 at 0x000002659C595260>
+2024-06-24 19:12:17,268 - DEBUG - Event before-parameter-build.s3.HeadObject: calling handler <function validate_bucket_name at 0x000002659C5951C0>
+2024-06-24 19:12:17,268 - DEBUG - Event before-parameter-build.s3.HeadObject: calling handler <function remove_bucket_from_url_paths_from_model at 0x000002659C597380>
+2024-06-24 19:12:17,268 - DEBUG - Event before-parameter-build.s3.HeadObject: calling handler <bound method S3RegionRedirectorv2.annotate_request_context of <botocore.utils.S3RegionRedirectorv2 object at 0x000002659E0331D0>>
+2024-06-24 19:12:17,268 - DEBUG - Event before-parameter-build.s3.HeadObject: calling handler <bound method ClientCreator._inject_s3_input_parameters of <botocore.client.ClientCreator object at 0x000002659DAC6890>>
+2024-06-24 19:12:17,268 - DEBUG - Event before-parameter-build.s3.HeadObject: calling handler <function generate_idempotent_uuid at 0x000002659C594FE0>
+2024-06-24 19:12:17,268 - DEBUG - Event before-endpoint-resolution.s3: calling handler <function customize_endpoint_resolver_builtins at 0x000002659C597560>
+2024-06-24 19:12:17,268 - DEBUG - Event before-endpoint-resolution.s3: calling handler <bound method S3RegionRedirectorv2.redirect_from_cache of <botocore.utils.S3RegionRedirectorv2 object at 0x000002659E0331D0>>
+2024-06-24 19:12:17,268 - DEBUG - Calling endpoint provider with parameters: {'Bucket': 'youtube-project-testing-vaibhav', 'Region': 'ap-south-1', 'UseFIPS': False, 'UseDualStack': False, 'ForcePathStyle': False, 'Accelerate': False, 'UseGlobalEndpoint': True, 'Key': 'sales_data/Multi_line_correct.json', 'DisableMultiRegionAccessPoints': False, 'UseArnRegion': True}
+2024-06-24 19:12:17,269 - DEBUG - Endpoint provider result: https://youtube-project-testing-vaibhav.s3.ap-south-1.amazonaws.com
+2024-06-24 19:12:17,269 - DEBUG - Selecting from endpoint provider's list of auth schemes: "sigv4". User selected auth scheme is: "None"
+2024-06-24 19:12:17,269 - DEBUG - Selected auth type "v4" as "v4" with signing context params: {'region': 'ap-south-1', 'signing_name': 's3', 'disableDoubleEncoding': True}
+2024-06-24 19:12:17,269 - DEBUG - Event before-call.s3.HeadObject: calling handler <function add_expect_header at 0x000002659C595580>
+2024-06-24 19:12:17,269 - DEBUG - Event before-call.s3.HeadObject: calling handler <bound method S3ExpressIdentityResolver.apply_signing_cache_key of <botocore.utils.S3ExpressIdentityResolver object at 0x000002659DBB8D10>>
+2024-06-24 19:12:17,269 - DEBUG - Event before-call.s3.HeadObject: calling handler <function add_recursion_detection_header at 0x000002659C567920>
+2024-06-24 19:12:17,269 - DEBUG - Event before-call.s3.HeadObject: calling handler <function inject_api_version_header_if_needed at 0x000002659C596AC0>
+2024-06-24 19:12:17,269 - DEBUG - Making request for OperationModel(name=HeadObject) with params: {'url_path': '/sales_data/Multi_line_correct.json', 'query_string': {}, 'method': 'HEAD', 'headers': {'User-Agent': 'Boto3/1.34.131 md/Botocore#1.34.131 ua/2.0 os/windows#10 md/arch#amd64 lang/python#3.11.6 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.34.131'}, 'body': b'', 'auth_path': '/youtube-project-testing-vaibhav/sales_data/Multi_line_correct.json', 'url': 'https://youtube-project-testing-vaibhav.s3.ap-south-1.amazonaws.com/sales_data/Multi_line_correct.json', 'context': {'client_region': 'us-east-1', 'client_config': <botocore.config.Config object at 0x000002659E01B790>, 'has_streaming_input': False, 'auth_type': 'v4', 's3_redirect': {'redirected': False, 'bucket': 'youtube-project-testing-vaibhav', 'params': {'Bucket': 'youtube-project-testing-vaibhav', 'Key': 'sales_data/Multi_line_correct.json'}}, 'input_params': {'Bucket': 'youtube-project-testing-vaibhav', 'Key': 'sales_data/Multi_line_correct.json'}, 'signing': {'region': 'ap-south-1', 'signing_name': 's3', 'disableDoubleEncoding': True}, 'endpoint_properties': {'authSchemes': [{'disableDoubleEncoding': True, 'name': 'sigv4', 'signingName': 's3', 'signingRegion': 'ap-south-1'}]}}}
+2024-06-24 19:12:17,269 - DEBUG - Event request-created.s3.HeadObject: calling handler <function signal_not_transferring at 0x000002659DF965C0>
+2024-06-24 19:12:17,269 - DEBUG - Event request-created.s3.HeadObject: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x000002659E01B750>>
+2024-06-24 19:12:17,269 - DEBUG - Event choose-signer.s3.HeadObject: calling handler <bound method ClientCreator._default_s3_presign_to_sigv2 of <botocore.client.ClientCreator object at 0x000002659DAC6890>>
+2024-06-24 19:12:17,269 - DEBUG - Event choose-signer.s3.HeadObject: calling handler <function set_operation_specific_signer at 0x000002659C594EA0>
+2024-06-24 19:12:17,270 - DEBUG - Event before-sign.s3.HeadObject: calling handler <function remove_arn_from_signing_path at 0x000002659C5974C0>
+2024-06-24 19:12:17,270 - DEBUG - Event before-sign.s3.HeadObject: calling handler <bound method S3ExpressIdentityResolver.resolve_s3express_identity of <botocore.utils.S3ExpressIdentityResolver object at 0x000002659DBB8D10>>
+2024-06-24 19:12:17,270 - DEBUG - Calculating signature using v4 auth.
+2024-06-24 19:12:17,270 - DEBUG - CanonicalRequest:
+HEAD
+/sales_data/Multi_line_correct.json
+
+host:youtube-project-testing-vaibhav.s3.ap-south-1.amazonaws.com
+x-amz-content-sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+x-amz-date:20240624T134217Z
+
+host;x-amz-content-sha256;x-amz-date
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+2024-06-24 19:12:17,270 - DEBUG - StringToSign:
+AWS4-HMAC-SHA256
+20240624T134217Z
+20240624/ap-south-1/s3/aws4_request
+a5697fafa41d4ebb961676e8cb5ad3e5632eb6ac600deab0da932bc708ac8a1d
+2024-06-24 19:12:17,270 - DEBUG - Signature:
+2055491aa502b582de1e13ccb8ec378fb8cbfcf83767b4c0d857cb80a616b82a
+2024-06-24 19:12:17,270 - DEBUG - Event request-created.s3.HeadObject: calling handler <function signal_transferring at 0x000002659DF96660>
+2024-06-24 19:12:17,270 - DEBUG - Event request-created.s3.HeadObject: calling handler <function add_retry_headers at 0x000002659C5972E0>
+2024-06-24 19:12:17,270 - DEBUG - Sending http request: <AWSPreparedRequest stream_output=False, method=HEAD, url=https://youtube-project-testing-vaibhav.s3.ap-south-1.amazonaws.com/sales_data/Multi_line_correct.json, headers={'User-Agent': b'Boto3/1.34.131 md/Botocore#1.34.131 ua/2.0 os/windows#10 md/arch#amd64 lang/python#3.11.6 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.34.131', 'X-Amz-Date': b'20240624T134217Z', 'X-Amz-Content-SHA256': b'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIA2UC3A4V7JS25LG77/20240624/ap-south-1/s3/aws4_request, SignedHeaders=host;x-amz-content-sha256;x-amz-date, Signature=2055491aa502b582de1e13ccb8ec378fb8cbfcf83767b4c0d857cb80a616b82a', 'amz-sdk-invocation-id': b'738ea0d3-1729-4517-b5d5-676164a35a48', 'amz-sdk-request': b'attempt=1'}>
+2024-06-24 19:12:17,270 - DEBUG - Certificate path: C:\Users\hp\PycharmProjects\youtube_ideas\youtube_de_project1\vaibhav-venv\Lib\site-packages\botocore\cacert.pem
+2024-06-24 19:12:17,299 - DEBUG - https://youtube-project-testing-vaibhav.s3.ap-south-1.amazonaws.com:443 "HEAD /sales_data/Multi_line_correct.json HTTP/11" 200 0
+2024-06-24 19:12:17,299 - DEBUG - Response headers: {'x-amz-id-2': '5hmFuWXpAv4jZNL3NWjGwjuFgiuFIpbQYYTeSwkwRzUdMfR0Zg0rathrQCLBPZC0auRUoobfWQxjIZkLHm6djw==', 'x-amz-request-id': 'SG3TJWEYDFV682KG', 'Date': 'Mon, 24 Jun 2024 13:42:19 GMT', 'Last-Modified': 'Mon, 24 Jun 2024 12:33:29 GMT', 'ETag': '"39ae69058eec376ea75e4994e9cdc0c0"', 'x-amz-server-side-encryption': 'AES256', 'Accept-Ranges': 'bytes', 'Content-Type': 'binary/octet-stream', 'Server': 'AmazonS3', 'Content-Length': '314'}
+2024-06-24 19:12:17,300 - DEBUG - Response body:
+b''
+2024-06-24 19:12:17,300 - DEBUG - Event needs-retry.s3.HeadObject: calling handler <botocore.retryhandler.RetryHandler object at 0x000002659C0E5050>
+2024-06-24 19:12:17,300 - DEBUG - No retry needed.
+2024-06-24 19:12:17,300 - DEBUG - Event needs-retry.s3.HeadObject: calling handler <bound method S3RegionRedirectorv2.redirect_from_error of <botocore.utils.S3RegionRedirectorv2 object at 0x000002659E0331D0>>
+2024-06-24 19:12:17,301 - DEBUG - Submitting task ImmediatelyWriteIOGetObjectTask(transfer_id=0, {'bucket': 'youtube-project-testing-vaibhav', 'key': 'sales_data/Multi_line_correct.json', 'extra_args': {}}) to executor <s3transfer.futures.BoundedExecutor object at 0x000002659F376490> for transfer request: 0.
+2024-06-24 19:12:17,301 - DEBUG - Acquiring 0
+2024-06-24 19:12:17,301 - DEBUG - ImmediatelyWriteIOGetObjectTask(transfer_id=0, {'bucket': 'youtube-project-testing-vaibhav', 'key': 'sales_data/Multi_line_correct.json', 'extra_args': {}}) about to wait for the following futures []
+2024-06-24 19:12:17,301 - DEBUG - ImmediatelyWriteIOGetObjectTask(transfer_id=0, {'bucket': 'youtube-project-testing-vaibhav', 'key': 'sales_data/Multi_line_correct.json', 'extra_args': {}}) done waiting for dependent futures
+2024-06-24 19:12:17,301 - DEBUG - Executing task ImmediatelyWriteIOGetObjectTask(transfer_id=0, {'bucket': 'youtube-project-testing-vaibhav', 'key': 'sales_data/Multi_line_correct.json', 'extra_args': {}}) with kwargs {'client': <botocore.client.S3 object at 0x000002659C32B010>, 'bucket': 'youtube-project-testing-vaibhav', 'key': 'sales_data/Multi_line_correct.json', 'fileobj': <s3transfer.utils.DeferredOpenFile object at 0x000002659F37C310>, 'extra_args': {}, 'callbacks': [], 'max_attempts': 5, 'download_output_manager': <s3transfer.download.DownloadFilenameOutputManager object at 0x000002659E05CA90>, 'io_chunksize': 262144, 'bandwidth_limiter': None}
+2024-06-24 19:12:17,301 - DEBUG - Event before-parameter-build.s3.GetObject: calling handler <function sse_md5 at 0x000002659C595260>
+2024-06-24 19:12:17,301 - DEBUG - Event before-parameter-build.s3.GetObject: calling handler <function validate_bucket_name at 0x000002659C5951C0>
+2024-06-24 19:12:17,302 - DEBUG - Event before-parameter-build.s3.GetObject: calling handler <function remove_bucket_from_url_paths_from_model at 0x000002659C597380>
+2024-06-24 19:12:17,302 - DEBUG - Event before-parameter-build.s3.GetObject: calling handler <bound method S3RegionRedirectorv2.annotate_request_context of <botocore.utils.S3RegionRedirectorv2 object at 0x000002659E0331D0>>
+2024-06-24 19:12:17,302 - DEBUG - Event before-parameter-build.s3.GetObject: calling handler <bound method ClientCreator._inject_s3_input_parameters of <botocore.client.ClientCreator object at 0x000002659DAC6890>>
+2024-06-24 19:12:17,302 - DEBUG - Event before-parameter-build.s3.GetObject: calling handler <function generate_idempotent_uuid at 0x000002659C594FE0>
+2024-06-24 19:12:17,302 - DEBUG - Event before-endpoint-resolution.s3: calling handler <function customize_endpoint_resolver_builtins at 0x000002659C597560>
+2024-06-24 19:12:17,302 - DEBUG - Event before-endpoint-resolution.s3: calling handler <bound method S3RegionRedirectorv2.redirect_from_cache of <botocore.utils.S3RegionRedirectorv2 object at 0x000002659E0331D0>>
+2024-06-24 19:12:17,302 - DEBUG - Releasing acquire 0/None
+2024-06-24 19:12:17,302 - DEBUG - Calling endpoint provider with parameters: {'Bucket': 'youtube-project-testing-vaibhav', 'Region': 'ap-south-1', 'UseFIPS': False, 'UseDualStack': False, 'ForcePathStyle': False, 'Accelerate': False, 'UseGlobalEndpoint': True, 'Key': 'sales_data/Multi_line_correct.json', 'DisableMultiRegionAccessPoints': False, 'UseArnRegion': True}
+2024-06-24 19:12:17,302 - DEBUG - Endpoint provider result: https://youtube-project-testing-vaibhav.s3.ap-south-1.amazonaws.com
+2024-06-24 19:12:17,302 - DEBUG - Selecting from endpoint provider's list of auth schemes: "sigv4". User selected auth scheme is: "None"
+2024-06-24 19:12:17,302 - DEBUG - Selected auth type "v4" as "v4" with signing context params: {'region': 'ap-south-1', 'signing_name': 's3', 'disableDoubleEncoding': True}
+2024-06-24 19:12:17,303 - DEBUG - Event before-call.s3.GetObject: calling handler <function add_expect_header at 0x000002659C595580>
+2024-06-24 19:12:17,303 - DEBUG - Event before-call.s3.GetObject: calling handler <bound method S3ExpressIdentityResolver.apply_signing_cache_key of <botocore.utils.S3ExpressIdentityResolver object at 0x000002659DBB8D10>>
+2024-06-24 19:12:17,303 - DEBUG - Event before-call.s3.GetObject: calling handler <function add_recursion_detection_header at 0x000002659C567920>
+2024-06-24 19:12:17,303 - DEBUG - Event before-call.s3.GetObject: calling handler <function inject_api_version_header_if_needed at 0x000002659C596AC0>
+2024-06-24 19:12:17,303 - DEBUG - Making request for OperationModel(name=GetObject) with params: {'url_path': '/sales_data/Multi_line_correct.json', 'query_string': {}, 'method': 'GET', 'headers': {'User-Agent': 'Boto3/1.34.131 md/Botocore#1.34.131 ua/2.0 os/windows#10 md/arch#amd64 lang/python#3.11.6 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.34.131'}, 'body': b'', 'auth_path': '/youtube-project-testing-vaibhav/sales_data/Multi_line_correct.json', 'url': 'https://youtube-project-testing-vaibhav.s3.ap-south-1.amazonaws.com/sales_data/Multi_line_correct.json', 'context': {'client_region': 'us-east-1', 'client_config': <botocore.config.Config object at 0x000002659E01B790>, 'has_streaming_input': False, 'auth_type': 'v4', 's3_redirect': {'redirected': False, 'bucket': 'youtube-project-testing-vaibhav', 'params': {'Bucket': 'youtube-project-testing-vaibhav', 'Key': 'sales_data/Multi_line_correct.json'}}, 'input_params': {'Bucket': 'youtube-project-testing-vaibhav', 'Key': 'sales_data/Multi_line_correct.json'}, 'signing': {'region': 'ap-south-1', 'signing_name': 's3', 'disableDoubleEncoding': True}, 'endpoint_properties': {'authSchemes': [{'disableDoubleEncoding': True, 'name': 'sigv4', 'signingName': 's3', 'signingRegion': 'ap-south-1'}]}}}
+2024-06-24 19:12:17,303 - DEBUG - Event request-created.s3.GetObject: calling handler <function signal_not_transferring at 0x000002659DF965C0>
+2024-06-24 19:12:17,303 - DEBUG - Event request-created.s3.GetObject: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x000002659E01B750>>
+2024-06-24 19:12:17,303 - DEBUG - Event choose-signer.s3.GetObject: calling handler <bound method ClientCreator._default_s3_presign_to_sigv2 of <botocore.client.ClientCreator object at 0x000002659DAC6890>>
+2024-06-24 19:12:17,303 - DEBUG - Event choose-signer.s3.GetObject: calling handler <function set_operation_specific_signer at 0x000002659C594EA0>
+2024-06-24 19:12:17,303 - DEBUG - Event before-sign.s3.GetObject: calling handler <function remove_arn_from_signing_path at 0x000002659C5974C0>
+2024-06-24 19:12:17,303 - DEBUG - Event before-sign.s3.GetObject: calling handler <bound method S3ExpressIdentityResolver.resolve_s3express_identity of <botocore.utils.S3ExpressIdentityResolver object at 0x000002659DBB8D10>>
+2024-06-24 19:12:17,303 - DEBUG - Calculating signature using v4 auth.
+2024-06-24 19:12:17,303 - DEBUG - CanonicalRequest:
+GET
+/sales_data/Multi_line_correct.json
+
+host:youtube-project-testing-vaibhav.s3.ap-south-1.amazonaws.com
+x-amz-content-sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+x-amz-date:20240624T134217Z
+
+host;x-amz-content-sha256;x-amz-date
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+2024-06-24 19:12:17,303 - DEBUG - StringToSign:
+AWS4-HMAC-SHA256
+20240624T134217Z
+20240624/ap-south-1/s3/aws4_request
+2edbfa71b9b9e1f4e27cfc64befcba5c48aa1816fe6361faae3740532be12952
+2024-06-24 19:12:17,303 - DEBUG - Signature:
+4aede517e02770bfc1825a1ca290c1e2a272e782739f93b70e31484bd9d45253
+2024-06-24 19:12:17,304 - DEBUG - Event request-created.s3.GetObject: calling handler <function signal_transferring at 0x000002659DF96660>
+2024-06-24 19:12:17,304 - DEBUG - Event request-created.s3.GetObject: calling handler <function add_retry_headers at 0x000002659C5972E0>
+2024-06-24 19:12:17,304 - DEBUG - Sending http request: <AWSPreparedRequest stream_output=True, method=GET, url=https://youtube-project-testing-vaibhav.s3.ap-south-1.amazonaws.com/sales_data/Multi_line_correct.json, headers={'User-Agent': b'Boto3/1.34.131 md/Botocore#1.34.131 ua/2.0 os/windows#10 md/arch#amd64 lang/python#3.11.6 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.34.131', 'X-Amz-Date': b'20240624T134217Z', 'X-Amz-Content-SHA256': b'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIA2UC3A4V7JS25LG77/20240624/ap-south-1/s3/aws4_request, SignedHeaders=host;x-amz-content-sha256;x-amz-date, Signature=4aede517e02770bfc1825a1ca290c1e2a272e782739f93b70e31484bd9d45253', 'amz-sdk-invocation-id': b'939027b3-0708-485a-943b-16665cdade2c', 'amz-sdk-request': b'attempt=1'}>
+2024-06-24 19:12:17,304 - DEBUG - Certificate path: C:\Users\hp\PycharmProjects\youtube_ideas\youtube_de_project1\vaibhav-venv\Lib\site-packages\botocore\cacert.pem
+2024-06-24 19:12:17,351 - DEBUG - https://youtube-project-testing-vaibhav.s3.ap-south-1.amazonaws.com:443 "GET /sales_data/Multi_line_correct.json HTTP/11" 200 314
+2024-06-24 19:12:17,351 - DEBUG - Response headers: {'x-amz-id-2': 'FvdjrYK/8o19NAdqBz7YLBl4XGvcO8+nbiorUUAcOT65Oxgp3g51FvBlLaqi2txSi0B2th5+GL9SS/mzKfHP0w==', 'x-amz-request-id': 'SG3S28WJ3WHV22M3', 'Date': 'Mon, 24 Jun 2024 13:42:19 GMT', 'Last-Modified': 'Mon, 24 Jun 2024 12:33:29 GMT', 'ETag': '"39ae69058eec376ea75e4994e9cdc0c0"', 'x-amz-server-side-encryption': 'AES256', 'Accept-Ranges': 'bytes', 'Content-Type': 'binary/octet-stream', 'Server': 'AmazonS3', 'Content-Length': '314'}
+2024-06-24 19:12:17,351 - DEBUG - Response body:
+<botocore.response.StreamingBody object at 0x000002659E003FA0>
+2024-06-24 19:12:17,352 - DEBUG - Event needs-retry.s3.GetObject: calling handler <botocore.retryhandler.RetryHandler object at 0x000002659C0E5050>
+2024-06-24 19:12:17,352 - DEBUG - No retry needed.
+2024-06-24 19:12:17,353 - DEBUG - Event needs-retry.s3.GetObject: calling handler <bound method S3RegionRedirectorv2.redirect_from_error of <botocore.utils.S3RegionRedirectorv2 object at 0x000002659E0331D0>>
+2024-06-24 19:12:17,353 - DEBUG - IOWriteTask(transfer_id=0, {'offset': 0}) about to wait for the following futures []
+2024-06-24 19:12:17,353 - DEBUG - IOWriteTask(transfer_id=0, {'offset': 0}) done waiting for dependent futures
+2024-06-24 19:12:17,353 - DEBUG - Executing task IOWriteTask(transfer_id=0, {'offset': 0}) with kwargs {'fileobj': <s3transfer.utils.DeferredOpenFile object at 0x000002659F37C310>, 'offset': 0}
+2024-06-24 19:12:17,354 - DEBUG - IORenameFileTask(transfer_id=0, {'final_filename': 'C:\\Users\\hp\\Documents\\data_engineering\\spark_data\\file_from_s3\\Multi_line_correct.json'}) about to wait for the following futures []
+2024-06-24 19:12:17,354 - DEBUG - IORenameFileTask(transfer_id=0, {'final_filename': 'C:\\Users\\hp\\Documents\\data_engineering\\spark_data\\file_from_s3\\Multi_line_correct.json'}) done waiting for dependent futures
+2024-06-24 19:12:17,355 - DEBUG - Executing task IORenameFileTask(transfer_id=0, {'final_filename': 'C:\\Users\\hp\\Documents\\data_engineering\\spark_data\\file_from_s3\\Multi_line_correct.json'}) with kwargs {'fileobj': <s3transfer.utils.DeferredOpenFile object at 0x000002659F37C310>, 'final_filename': 'C:\\Users\\hp\\Documents\\data_engineering\\spark_data\\file_from_s3\\Multi_line_correct.json', 'osutil': <s3transfer.utils.OSUtils object at 0x000002659F38CCD0>}
+2024-06-24 19:12:17,356 - DEBUG - Releasing acquire 0/None
+2024-06-24 19:12:17,356 - INFO - File name Multi_line_incorrect.json 
+2024-06-24 19:12:17,357 - DEBUG - Opting out of CRT Transfer Manager. Preferred client: auto, CRT available: False, Instance Optimized: False.
+2024-06-24 19:12:17,357 - DEBUG - Using default client. pid: 18236, thread: 15628
+2024-06-24 19:12:17,357 - DEBUG - Acquiring 0
+2024-06-24 19:12:17,357 - DEBUG - DownloadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x000002659F3B0DD0>}) about to wait for the following futures []
+2024-06-24 19:12:17,357 - DEBUG - DownloadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x000002659F3B0DD0>}) done waiting for dependent futures
+2024-06-24 19:12:17,358 - DEBUG - Executing task DownloadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x000002659F3B0DD0>}) with kwargs {'client': <botocore.client.S3 object at 0x000002659C32B010>, 'config': <boto3.s3.transfer.TransferConfig object at 0x000002659DBA6ED0>, 'osutil': <s3transfer.utils.OSUtils object at 0x000002659DBA6BD0>, 'request_executor': <s3transfer.futures.BoundedExecutor object at 0x000002659DB9AED0>, 'transfer_future': <s3transfer.futures.TransferFuture object at 0x000002659F3B0DD0>, 'io_executor': <s3transfer.futures.BoundedExecutor object at 0x000002659F38D010>}
+2024-06-24 19:12:17,358 - DEBUG - Event before-parameter-build.s3.HeadObject: calling handler <function sse_md5 at 0x000002659C595260>
+2024-06-24 19:12:17,358 - DEBUG - Event before-parameter-build.s3.HeadObject: calling handler <function validate_bucket_name at 0x000002659C5951C0>
+2024-06-24 19:12:17,358 - DEBUG - Event before-parameter-build.s3.HeadObject: calling handler <function remove_bucket_from_url_paths_from_model at 0x000002659C597380>
+2024-06-24 19:12:17,358 - DEBUG - Event before-parameter-build.s3.HeadObject: calling handler <bound method S3RegionRedirectorv2.annotate_request_context of <botocore.utils.S3RegionRedirectorv2 object at 0x000002659E0331D0>>
+2024-06-24 19:12:17,358 - DEBUG - Event before-parameter-build.s3.HeadObject: calling handler <bound method ClientCreator._inject_s3_input_parameters of <botocore.client.ClientCreator object at 0x000002659DAC6890>>
+2024-06-24 19:12:17,358 - DEBUG - Event before-parameter-build.s3.HeadObject: calling handler <function generate_idempotent_uuid at 0x000002659C594FE0>
+2024-06-24 19:12:17,358 - DEBUG - Event before-endpoint-resolution.s3: calling handler <function customize_endpoint_resolver_builtins at 0x000002659C597560>
+2024-06-24 19:12:17,358 - DEBUG - Event before-endpoint-resolution.s3: calling handler <bound method S3RegionRedirectorv2.redirect_from_cache of <botocore.utils.S3RegionRedirectorv2 object at 0x000002659E0331D0>>
+2024-06-24 19:12:17,358 - DEBUG - Calling endpoint provider with parameters: {'Bucket': 'youtube-project-testing-vaibhav', 'Region': 'ap-south-1', 'UseFIPS': False, 'UseDualStack': False, 'ForcePathStyle': False, 'Accelerate': False, 'UseGlobalEndpoint': True, 'Key': 'sales_data/Multi_line_incorrect.json', 'DisableMultiRegionAccessPoints': False, 'UseArnRegion': True}
+2024-06-24 19:12:17,359 - DEBUG - Endpoint provider result: https://youtube-project-testing-vaibhav.s3.ap-south-1.amazonaws.com
+2024-06-24 19:12:17,359 - DEBUG - Selecting from endpoint provider's list of auth schemes: "sigv4". User selected auth scheme is: "None"
+2024-06-24 19:12:17,359 - DEBUG - Selected auth type "v4" as "v4" with signing context params: {'region': 'ap-south-1', 'signing_name': 's3', 'disableDoubleEncoding': True}
+2024-06-24 19:12:17,359 - DEBUG - Event before-call.s3.HeadObject: calling handler <function add_expect_header at 0x000002659C595580>
+2024-06-24 19:12:17,359 - DEBUG - Event before-call.s3.HeadObject: calling handler <bound method S3ExpressIdentityResolver.apply_signing_cache_key of <botocore.utils.S3ExpressIdentityResolver object at 0x000002659DBB8D10>>
+2024-06-24 19:12:17,359 - DEBUG - Event before-call.s3.HeadObject: calling handler <function add_recursion_detection_header at 0x000002659C567920>
+2024-06-24 19:12:17,359 - DEBUG - Event before-call.s3.HeadObject: calling handler <function inject_api_version_header_if_needed at 0x000002659C596AC0>
+2024-06-24 19:12:17,359 - DEBUG - Making request for OperationModel(name=HeadObject) with params: {'url_path': '/sales_data/Multi_line_incorrect.json', 'query_string': {}, 'method': 'HEAD', 'headers': {'User-Agent': 'Boto3/1.34.131 md/Botocore#1.34.131 ua/2.0 os/windows#10 md/arch#amd64 lang/python#3.11.6 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.34.131'}, 'body': b'', 'auth_path': '/youtube-project-testing-vaibhav/sales_data/Multi_line_incorrect.json', 'url': 'https://youtube-project-testing-vaibhav.s3.ap-south-1.amazonaws.com/sales_data/Multi_line_incorrect.json', 'context': {'client_region': 'us-east-1', 'client_config': <botocore.config.Config object at 0x000002659E01B790>, 'has_streaming_input': False, 'auth_type': 'v4', 's3_redirect': {'redirected': False, 'bucket': 'youtube-project-testing-vaibhav', 'params': {'Bucket': 'youtube-project-testing-vaibhav', 'Key': 'sales_data/Multi_line_incorrect.json'}}, 'input_params': {'Bucket': 'youtube-project-testing-vaibhav', 'Key': 'sales_data/Multi_line_incorrect.json'}, 'signing': {'region': 'ap-south-1', 'signing_name': 's3', 'disableDoubleEncoding': True}, 'endpoint_properties': {'authSchemes': [{'disableDoubleEncoding': True, 'name': 'sigv4', 'signingName': 's3', 'signingRegion': 'ap-south-1'}]}}}
+2024-06-24 19:12:17,359 - DEBUG - Event request-created.s3.HeadObject: calling handler <function signal_not_transferring at 0x000002659DF965C0>
+2024-06-24 19:12:17,359 - DEBUG - Event request-created.s3.HeadObject: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x000002659E01B750>>
+2024-06-24 19:12:17,359 - DEBUG - Event choose-signer.s3.HeadObject: calling handler <bound method ClientCreator._default_s3_presign_to_sigv2 of <botocore.client.ClientCreator object at 0x000002659DAC6890>>
+2024-06-24 19:12:17,359 - DEBUG - Event choose-signer.s3.HeadObject: calling handler <function set_operation_specific_signer at 0x000002659C594EA0>
+2024-06-24 19:12:17,359 - DEBUG - Event before-sign.s3.HeadObject: calling handler <function remove_arn_from_signing_path at 0x000002659C5974C0>
+2024-06-24 19:12:17,360 - DEBUG - Event before-sign.s3.HeadObject: calling handler <bound method S3ExpressIdentityResolver.resolve_s3express_identity of <botocore.utils.S3ExpressIdentityResolver object at 0x000002659DBB8D10>>
+2024-06-24 19:12:17,360 - DEBUG - Calculating signature using v4 auth.
+2024-06-24 19:12:17,360 - DEBUG - CanonicalRequest:
+HEAD
+/sales_data/Multi_line_incorrect.json
+
+host:youtube-project-testing-vaibhav.s3.ap-south-1.amazonaws.com
+x-amz-content-sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+x-amz-date:20240624T134217Z
+
+host;x-amz-content-sha256;x-amz-date
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+2024-06-24 19:12:17,360 - DEBUG - StringToSign:
+AWS4-HMAC-SHA256
+20240624T134217Z
+20240624/ap-south-1/s3/aws4_request
+1fe621c788e9b3850a45fd94ae68c534807ec6e97ca773ee7a2a6d1a58f8fdc5
+2024-06-24 19:12:17,360 - DEBUG - Signature:
+3e1189e7c94debe0bcc0bb446517ea37eb9e881e6fd3b877a0ff3af57d7b2997
+2024-06-24 19:12:17,360 - DEBUG - Event request-created.s3.HeadObject: calling handler <function signal_transferring at 0x000002659DF96660>
+2024-06-24 19:12:17,360 - DEBUG - Event request-created.s3.HeadObject: calling handler <function add_retry_headers at 0x000002659C5972E0>
+2024-06-24 19:12:17,360 - DEBUG - Sending http request: <AWSPreparedRequest stream_output=False, method=HEAD, url=https://youtube-project-testing-vaibhav.s3.ap-south-1.amazonaws.com/sales_data/Multi_line_incorrect.json, headers={'User-Agent': b'Boto3/1.34.131 md/Botocore#1.34.131 ua/2.0 os/windows#10 md/arch#amd64 lang/python#3.11.6 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.34.131', 'X-Amz-Date': b'20240624T134217Z', 'X-Amz-Content-SHA256': b'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIA2UC3A4V7JS25LG77/20240624/ap-south-1/s3/aws4_request, SignedHeaders=host;x-amz-content-sha256;x-amz-date, Signature=3e1189e7c94debe0bcc0bb446517ea37eb9e881e6fd3b877a0ff3af57d7b2997', 'amz-sdk-invocation-id': b'e2b9e182-8027-4d4b-8701-d9ab8393f389', 'amz-sdk-request': b'attempt=1'}>
+2024-06-24 19:12:17,360 - DEBUG - Certificate path: C:\Users\hp\PycharmProjects\youtube_ideas\youtube_de_project1\vaibhav-venv\Lib\site-packages\botocore\cacert.pem
+2024-06-24 19:12:17,389 - DEBUG - https://youtube-project-testing-vaibhav.s3.ap-south-1.amazonaws.com:443 "HEAD /sales_data/Multi_line_incorrect.json HTTP/11" 200 0
+2024-06-24 19:12:17,389 - DEBUG - Response headers: {'x-amz-id-2': 'or0Nb/YzXMHpk1oF7CAxNTnU/CuVna89MaoBndkPtfmBuI71G7BwXb5+5xP/Rd4psDJtJwdleW8PH96aKiqp1w==', 'x-amz-request-id': 'SG3HTVD8CW7VRXZB', 'Date': 'Mon, 24 Jun 2024 13:42:19 GMT', 'Last-Modified': 'Mon, 24 Jun 2024 12:33:29 GMT', 'ETag': '"25ead52c8748864d8eafb1d290e7fedb"', 'x-amz-server-side-encryption': 'AES256', 'Accept-Ranges': 'bytes', 'Content-Type': 'binary/octet-stream', 'Server': 'AmazonS3', 'Content-Length': '306'}
+2024-06-24 19:12:17,389 - DEBUG - Response body:
+b''
+2024-06-24 19:12:17,390 - DEBUG - Event needs-retry.s3.HeadObject: calling handler <botocore.retryhandler.RetryHandler object at 0x000002659C0E5050>
+2024-06-24 19:12:17,390 - DEBUG - No retry needed.
+2024-06-24 19:12:17,390 - DEBUG - Event needs-retry.s3.HeadObject: calling handler <bound method S3RegionRedirectorv2.redirect_from_error of <botocore.utils.S3RegionRedirectorv2 object at 0x000002659E0331D0>>
+2024-06-24 19:12:17,390 - DEBUG - Submitting task ImmediatelyWriteIOGetObjectTask(transfer_id=0, {'bucket': 'youtube-project-testing-vaibhav', 'key': 'sales_data/Multi_line_incorrect.json', 'extra_args': {}}) to executor <s3transfer.futures.BoundedExecutor object at 0x000002659DB9AED0> for transfer request: 0.
+2024-06-24 19:12:17,390 - DEBUG - Acquiring 0
+2024-06-24 19:12:17,391 - DEBUG - ImmediatelyWriteIOGetObjectTask(transfer_id=0, {'bucket': 'youtube-project-testing-vaibhav', 'key': 'sales_data/Multi_line_incorrect.json', 'extra_args': {}}) about to wait for the following futures []
+2024-06-24 19:12:17,391 - DEBUG - ImmediatelyWriteIOGetObjectTask(transfer_id=0, {'bucket': 'youtube-project-testing-vaibhav', 'key': 'sales_data/Multi_line_incorrect.json', 'extra_args': {}}) done waiting for dependent futures
+2024-06-24 19:12:17,391 - DEBUG - Executing task ImmediatelyWriteIOGetObjectTask(transfer_id=0, {'bucket': 'youtube-project-testing-vaibhav', 'key': 'sales_data/Multi_line_incorrect.json', 'extra_args': {}}) with kwargs {'client': <botocore.client.S3 object at 0x000002659C32B010>, 'bucket': 'youtube-project-testing-vaibhav', 'key': 'sales_data/Multi_line_incorrect.json', 'fileobj': <s3transfer.utils.DeferredOpenFile object at 0x000002659F3CA7D0>, 'extra_args': {}, 'callbacks': [], 'max_attempts': 5, 'download_output_manager': <s3transfer.download.DownloadFilenameOutputManager object at 0x000002659E03BFD0>, 'io_chunksize': 262144, 'bandwidth_limiter': None}
+2024-06-24 19:12:17,391 - DEBUG - Event before-parameter-build.s3.GetObject: calling handler <function sse_md5 at 0x000002659C595260>
+2024-06-24 19:12:17,391 - DEBUG - Event before-parameter-build.s3.GetObject: calling handler <function validate_bucket_name at 0x000002659C5951C0>
+2024-06-24 19:12:17,391 - DEBUG - Releasing acquire 0/None
+2024-06-24 19:12:17,391 - DEBUG - Event before-parameter-build.s3.GetObject: calling handler <function remove_bucket_from_url_paths_from_model at 0x000002659C597380>
+2024-06-24 19:12:17,392 - DEBUG - Event before-parameter-build.s3.GetObject: calling handler <bound method S3RegionRedirectorv2.annotate_request_context of <botocore.utils.S3RegionRedirectorv2 object at 0x000002659E0331D0>>
+2024-06-24 19:12:17,392 - DEBUG - Event before-parameter-build.s3.GetObject: calling handler <bound method ClientCreator._inject_s3_input_parameters of <botocore.client.ClientCreator object at 0x000002659DAC6890>>
+2024-06-24 19:12:17,392 - DEBUG - Event before-parameter-build.s3.GetObject: calling handler <function generate_idempotent_uuid at 0x000002659C594FE0>
+2024-06-24 19:12:17,392 - DEBUG - Event before-endpoint-resolution.s3: calling handler <function customize_endpoint_resolver_builtins at 0x000002659C597560>
+2024-06-24 19:12:17,392 - DEBUG - Event before-endpoint-resolution.s3: calling handler <bound method S3RegionRedirectorv2.redirect_from_cache of <botocore.utils.S3RegionRedirectorv2 object at 0x000002659E0331D0>>
+2024-06-24 19:12:17,392 - DEBUG - Calling endpoint provider with parameters: {'Bucket': 'youtube-project-testing-vaibhav', 'Region': 'ap-south-1', 'UseFIPS': False, 'UseDualStack': False, 'ForcePathStyle': False, 'Accelerate': False, 'UseGlobalEndpoint': True, 'Key': 'sales_data/Multi_line_incorrect.json', 'DisableMultiRegionAccessPoints': False, 'UseArnRegion': True}
+2024-06-24 19:12:17,392 - DEBUG - Endpoint provider result: https://youtube-project-testing-vaibhav.s3.ap-south-1.amazonaws.com
+2024-06-24 19:12:17,392 - DEBUG - Selecting from endpoint provider's list of auth schemes: "sigv4". User selected auth scheme is: "None"
+2024-06-24 19:12:17,392 - DEBUG - Selected auth type "v4" as "v4" with signing context params: {'region': 'ap-south-1', 'signing_name': 's3', 'disableDoubleEncoding': True}
+2024-06-24 19:12:17,392 - DEBUG - Event before-call.s3.GetObject: calling handler <function add_expect_header at 0x000002659C595580>
+2024-06-24 19:12:17,392 - DEBUG - Event before-call.s3.GetObject: calling handler <bound method S3ExpressIdentityResolver.apply_signing_cache_key of <botocore.utils.S3ExpressIdentityResolver object at 0x000002659DBB8D10>>
+2024-06-24 19:12:17,392 - DEBUG - Event before-call.s3.GetObject: calling handler <function add_recursion_detection_header at 0x000002659C567920>
+2024-06-24 19:12:17,392 - DEBUG - Event before-call.s3.GetObject: calling handler <function inject_api_version_header_if_needed at 0x000002659C596AC0>
+2024-06-24 19:12:17,392 - DEBUG - Making request for OperationModel(name=GetObject) with params: {'url_path': '/sales_data/Multi_line_incorrect.json', 'query_string': {}, 'method': 'GET', 'headers': {'User-Agent': 'Boto3/1.34.131 md/Botocore#1.34.131 ua/2.0 os/windows#10 md/arch#amd64 lang/python#3.11.6 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.34.131'}, 'body': b'', 'auth_path': '/youtube-project-testing-vaibhav/sales_data/Multi_line_incorrect.json', 'url': 'https://youtube-project-testing-vaibhav.s3.ap-south-1.amazonaws.com/sales_data/Multi_line_incorrect.json', 'context': {'client_region': 'us-east-1', 'client_config': <botocore.config.Config object at 0x000002659E01B790>, 'has_streaming_input': False, 'auth_type': 'v4', 's3_redirect': {'redirected': False, 'bucket': 'youtube-project-testing-vaibhav', 'params': {'Bucket': 'youtube-project-testing-vaibhav', 'Key': 'sales_data/Multi_line_incorrect.json'}}, 'input_params': {'Bucket': 'youtube-project-testing-vaibhav', 'Key': 'sales_data/Multi_line_incorrect.json'}, 'signing': {'region': 'ap-south-1', 'signing_name': 's3', 'disableDoubleEncoding': True}, 'endpoint_properties': {'authSchemes': [{'disableDoubleEncoding': True, 'name': 'sigv4', 'signingName': 's3', 'signingRegion': 'ap-south-1'}]}}}
+2024-06-24 19:12:17,392 - DEBUG - Event request-created.s3.GetObject: calling handler <function signal_not_transferring at 0x000002659DF965C0>
+2024-06-24 19:12:17,392 - DEBUG - Event request-created.s3.GetObject: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x000002659E01B750>>
+2024-06-24 19:12:17,392 - DEBUG - Event choose-signer.s3.GetObject: calling handler <bound method ClientCreator._default_s3_presign_to_sigv2 of <botocore.client.ClientCreator object at 0x000002659DAC6890>>
+2024-06-24 19:12:17,392 - DEBUG - Event choose-signer.s3.GetObject: calling handler <function set_operation_specific_signer at 0x000002659C594EA0>
+2024-06-24 19:12:17,392 - DEBUG - Event before-sign.s3.GetObject: calling handler <function remove_arn_from_signing_path at 0x000002659C5974C0>
+2024-06-24 19:12:17,392 - DEBUG - Event before-sign.s3.GetObject: calling handler <bound method S3ExpressIdentityResolver.resolve_s3express_identity of <botocore.utils.S3ExpressIdentityResolver object at 0x000002659DBB8D10>>
+2024-06-24 19:12:17,393 - DEBUG - Calculating signature using v4 auth.
+2024-06-24 19:12:17,393 - DEBUG - CanonicalRequest:
+GET
+/sales_data/Multi_line_incorrect.json
+
+host:youtube-project-testing-vaibhav.s3.ap-south-1.amazonaws.com
+x-amz-content-sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+x-amz-date:20240624T134217Z
+
+host;x-amz-content-sha256;x-amz-date
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+2024-06-24 19:12:17,393 - DEBUG - StringToSign:
+AWS4-HMAC-SHA256
+20240624T134217Z
+20240624/ap-south-1/s3/aws4_request
+6d26772222d1b9923c2ee96b5ba48e282a4efe59f824061b13e1e46e31079c18
+2024-06-24 19:12:17,393 - DEBUG - Signature:
+a0fb94a83009d4266412c347fa30d526521b4acff00ef74617028b5801b53e54
+2024-06-24 19:12:17,393 - DEBUG - Event request-created.s3.GetObject: calling handler <function signal_transferring at 0x000002659DF96660>
+2024-06-24 19:12:17,393 - DEBUG - Event request-created.s3.GetObject: calling handler <function add_retry_headers at 0x000002659C5972E0>
+2024-06-24 19:12:17,393 - DEBUG - Sending http request: <AWSPreparedRequest stream_output=True, method=GET, url=https://youtube-project-testing-vaibhav.s3.ap-south-1.amazonaws.com/sales_data/Multi_line_incorrect.json, headers={'User-Agent': b'Boto3/1.34.131 md/Botocore#1.34.131 ua/2.0 os/windows#10 md/arch#amd64 lang/python#3.11.6 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.34.131', 'X-Amz-Date': b'20240624T134217Z', 'X-Amz-Content-SHA256': b'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIA2UC3A4V7JS25LG77/20240624/ap-south-1/s3/aws4_request, SignedHeaders=host;x-amz-content-sha256;x-amz-date, Signature=a0fb94a83009d4266412c347fa30d526521b4acff00ef74617028b5801b53e54', 'amz-sdk-invocation-id': b'90b5e6a7-ac7d-45f3-a80f-6a067df67ed8', 'amz-sdk-request': b'attempt=1'}>
+2024-06-24 19:12:17,393 - DEBUG - Certificate path: C:\Users\hp\PycharmProjects\youtube_ideas\youtube_de_project1\vaibhav-venv\Lib\site-packages\botocore\cacert.pem
+2024-06-24 19:12:17,432 - DEBUG - https://youtube-project-testing-vaibhav.s3.ap-south-1.amazonaws.com:443 "GET /sales_data/Multi_line_incorrect.json HTTP/11" 200 306
+2024-06-24 19:12:17,433 - DEBUG - Response headers: {'x-amz-id-2': '2ixdZJTWIhdiuTfP8GvLozgTlC1wT4g0rCNkvp/qpVl9QT1OliXN4cO5zOKzY3SmJbBEp7z8tx2onKjPkWZU5g==', 'x-amz-request-id': 'SG3J7FWE73DHT8CD', 'Date': 'Mon, 24 Jun 2024 13:42:19 GMT', 'Last-Modified': 'Mon, 24 Jun 2024 12:33:29 GMT', 'ETag': '"25ead52c8748864d8eafb1d290e7fedb"', 'x-amz-server-side-encryption': 'AES256', 'Accept-Ranges': 'bytes', 'Content-Type': 'binary/octet-stream', 'Server': 'AmazonS3', 'Content-Length': '306'}
+2024-06-24 19:12:17,433 - DEBUG - Response body:
+<botocore.response.StreamingBody object at 0x000002659F3E40D0>
+2024-06-24 19:12:17,434 - DEBUG - Event needs-retry.s3.GetObject: calling handler <botocore.retryhandler.RetryHandler object at 0x000002659C0E5050>
+2024-06-24 19:12:17,434 - DEBUG - No retry needed.
+2024-06-24 19:12:17,434 - DEBUG - Event needs-retry.s3.GetObject: calling handler <bound method S3RegionRedirectorv2.redirect_from_error of <botocore.utils.S3RegionRedirectorv2 object at 0x000002659E0331D0>>
+2024-06-24 19:12:17,434 - DEBUG - IOWriteTask(transfer_id=0, {'offset': 0}) about to wait for the following futures []
+2024-06-24 19:12:17,434 - DEBUG - IOWriteTask(transfer_id=0, {'offset': 0}) done waiting for dependent futures
+2024-06-24 19:12:17,434 - DEBUG - Executing task IOWriteTask(transfer_id=0, {'offset': 0}) with kwargs {'fileobj': <s3transfer.utils.DeferredOpenFile object at 0x000002659F3CA7D0>, 'offset': 0}
+2024-06-24 19:12:17,435 - DEBUG - IORenameFileTask(transfer_id=0, {'final_filename': 'C:\\Users\\hp\\Documents\\data_engineering\\spark_data\\file_from_s3\\Multi_line_incorrect.json'}) about to wait for the following futures []
+2024-06-24 19:12:17,435 - DEBUG - IORenameFileTask(transfer_id=0, {'final_filename': 'C:\\Users\\hp\\Documents\\data_engineering\\spark_data\\file_from_s3\\Multi_line_incorrect.json'}) done waiting for dependent futures
+2024-06-24 19:12:17,436 - DEBUG - Executing task IORenameFileTask(transfer_id=0, {'final_filename': 'C:\\Users\\hp\\Documents\\data_engineering\\spark_data\\file_from_s3\\Multi_line_incorrect.json'}) with kwargs {'fileobj': <s3transfer.utils.DeferredOpenFile object at 0x000002659F3CA7D0>, 'final_filename': 'C:\\Users\\hp\\Documents\\data_engineering\\spark_data\\file_from_s3\\Multi_line_incorrect.json', 'osutil': <s3transfer.utils.OSUtils object at 0x000002659DBA6BD0>}
+2024-06-24 19:12:17,437 - DEBUG - Releasing acquire 0/None
+2024-06-24 19:12:17,437 - INFO - File name india_companies.csv 
+2024-06-24 19:12:17,437 - DEBUG - Opting out of CRT Transfer Manager. Preferred client: auto, CRT available: False, Instance Optimized: False.
+2024-06-24 19:12:17,438 - DEBUG - Using default client. pid: 18236, thread: 15628
+2024-06-24 19:12:17,438 - DEBUG - Acquiring 0
+2024-06-24 19:12:17,438 - DEBUG - DownloadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x000002659F3B1590>}) about to wait for the following futures []
+2024-06-24 19:12:17,438 - DEBUG - DownloadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x000002659F3B1590>}) done waiting for dependent futures
+2024-06-24 19:12:17,438 - DEBUG - Executing task DownloadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x000002659F3B1590>}) with kwargs {'client': <botocore.client.S3 object at 0x000002659C32B010>, 'config': <boto3.s3.transfer.TransferConfig object at 0x000002659F38CD10>, 'osutil': <s3transfer.utils.OSUtils object at 0x000002659F38CF10>, 'request_executor': <s3transfer.futures.BoundedExecutor object at 0x000002659C113810>, 'transfer_future': <s3transfer.futures.TransferFuture object at 0x000002659F3B1590>, 'io_executor': <s3transfer.futures.BoundedExecutor object at 0x000002659F37F250>}
+2024-06-24 19:12:17,438 - DEBUG - Event before-parameter-build.s3.HeadObject: calling handler <function sse_md5 at 0x000002659C595260>
+2024-06-24 19:12:17,438 - DEBUG - Event before-parameter-build.s3.HeadObject: calling handler <function validate_bucket_name at 0x000002659C5951C0>
+2024-06-24 19:12:17,439 - DEBUG - Event before-parameter-build.s3.HeadObject: calling handler <function remove_bucket_from_url_paths_from_model at 0x000002659C597380>
+2024-06-24 19:12:17,439 - DEBUG - Event before-parameter-build.s3.HeadObject: calling handler <bound method S3RegionRedirectorv2.annotate_request_context of <botocore.utils.S3RegionRedirectorv2 object at 0x000002659E0331D0>>
+2024-06-24 19:12:17,439 - DEBUG - Event before-parameter-build.s3.HeadObject: calling handler <bound method ClientCreator._inject_s3_input_parameters of <botocore.client.ClientCreator object at 0x000002659DAC6890>>
+2024-06-24 19:12:17,439 - DEBUG - Event before-parameter-build.s3.HeadObject: calling handler <function generate_idempotent_uuid at 0x000002659C594FE0>
+2024-06-24 19:12:17,439 - DEBUG - Event before-endpoint-resolution.s3: calling handler <function customize_endpoint_resolver_builtins at 0x000002659C597560>
+2024-06-24 19:12:17,439 - DEBUG - Event before-endpoint-resolution.s3: calling handler <bound method S3RegionRedirectorv2.redirect_from_cache of <botocore.utils.S3RegionRedirectorv2 object at 0x000002659E0331D0>>
+2024-06-24 19:12:17,439 - DEBUG - Calling endpoint provider with parameters: {'Bucket': 'youtube-project-testing-vaibhav', 'Region': 'ap-south-1', 'UseFIPS': False, 'UseDualStack': False, 'ForcePathStyle': False, 'Accelerate': False, 'UseGlobalEndpoint': True, 'Key': 'sales_data/india_companies.csv', 'DisableMultiRegionAccessPoints': False, 'UseArnRegion': True}
+2024-06-24 19:12:17,439 - DEBUG - Endpoint provider result: https://youtube-project-testing-vaibhav.s3.ap-south-1.amazonaws.com
+2024-06-24 19:12:17,439 - DEBUG - Selecting from endpoint provider's list of auth schemes: "sigv4". User selected auth scheme is: "None"
+2024-06-24 19:12:17,439 - DEBUG - Selected auth type "v4" as "v4" with signing context params: {'region': 'ap-south-1', 'signing_name': 's3', 'disableDoubleEncoding': True}
+2024-06-24 19:12:17,439 - DEBUG - Event before-call.s3.HeadObject: calling handler <function add_expect_header at 0x000002659C595580>
+2024-06-24 19:12:17,439 - DEBUG - Event before-call.s3.HeadObject: calling handler <bound method S3ExpressIdentityResolver.apply_signing_cache_key of <botocore.utils.S3ExpressIdentityResolver object at 0x000002659DBB8D10>>
+2024-06-24 19:12:17,439 - DEBUG - Event before-call.s3.HeadObject: calling handler <function add_recursion_detection_header at 0x000002659C567920>
+2024-06-24 19:12:17,440 - DEBUG - Event before-call.s3.HeadObject: calling handler <function inject_api_version_header_if_needed at 0x000002659C596AC0>
+2024-06-24 19:12:17,440 - DEBUG - Making request for OperationModel(name=HeadObject) with params: {'url_path': '/sales_data/india_companies.csv', 'query_string': {}, 'method': 'HEAD', 'headers': {'User-Agent': 'Boto3/1.34.131 md/Botocore#1.34.131 ua/2.0 os/windows#10 md/arch#amd64 lang/python#3.11.6 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.34.131'}, 'body': b'', 'auth_path': '/youtube-project-testing-vaibhav/sales_data/india_companies.csv', 'url': 'https://youtube-project-testing-vaibhav.s3.ap-south-1.amazonaws.com/sales_data/india_companies.csv', 'context': {'client_region': 'us-east-1', 'client_config': <botocore.config.Config object at 0x000002659E01B790>, 'has_streaming_input': False, 'auth_type': 'v4', 's3_redirect': {'redirected': False, 'bucket': 'youtube-project-testing-vaibhav', 'params': {'Bucket': 'youtube-project-testing-vaibhav', 'Key': 'sales_data/india_companies.csv'}}, 'input_params': {'Bucket': 'youtube-project-testing-vaibhav', 'Key': 'sales_data/india_companies.csv'}, 'signing': {'region': 'ap-south-1', 'signing_name': 's3', 'disableDoubleEncoding': True}, 'endpoint_properties': {'authSchemes': [{'disableDoubleEncoding': True, 'name': 'sigv4', 'signingName': 's3', 'signingRegion': 'ap-south-1'}]}}}
+2024-06-24 19:12:17,440 - DEBUG - Event request-created.s3.HeadObject: calling handler <function signal_not_transferring at 0x000002659DF965C0>
+2024-06-24 19:12:17,440 - DEBUG - Event request-created.s3.HeadObject: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x000002659E01B750>>
+2024-06-24 19:12:17,440 - DEBUG - Event choose-signer.s3.HeadObject: calling handler <bound method ClientCreator._default_s3_presign_to_sigv2 of <botocore.client.ClientCreator object at 0x000002659DAC6890>>
+2024-06-24 19:12:17,440 - DEBUG - Event choose-signer.s3.HeadObject: calling handler <function set_operation_specific_signer at 0x000002659C594EA0>
+2024-06-24 19:12:17,440 - DEBUG - Event before-sign.s3.HeadObject: calling handler <function remove_arn_from_signing_path at 0x000002659C5974C0>
+2024-06-24 19:12:17,440 - DEBUG - Event before-sign.s3.HeadObject: calling handler <bound method S3ExpressIdentityResolver.resolve_s3express_identity of <botocore.utils.S3ExpressIdentityResolver object at 0x000002659DBB8D10>>
+2024-06-24 19:12:17,440 - DEBUG - Calculating signature using v4 auth.
+2024-06-24 19:12:17,440 - DEBUG - CanonicalRequest:
+HEAD
+/sales_data/india_companies.csv
+
+host:youtube-project-testing-vaibhav.s3.ap-south-1.amazonaws.com
+x-amz-content-sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+x-amz-date:20240624T134217Z
+
+host;x-amz-content-sha256;x-amz-date
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+2024-06-24 19:12:17,440 - DEBUG - StringToSign:
+AWS4-HMAC-SHA256
+20240624T134217Z
+20240624/ap-south-1/s3/aws4_request
+3478c0ba1f287a9f8b0625b2a2ad917bfe591968b170baf8df89d7622a09acfb
+2024-06-24 19:12:17,440 - DEBUG - Signature:
+1db3a771a79d9c7d6941d3054a019a44fec6ef0164563e414ba724c3e749d7f8
+2024-06-24 19:12:17,440 - DEBUG - Event request-created.s3.HeadObject: calling handler <function signal_transferring at 0x000002659DF96660>
+2024-06-24 19:12:17,440 - DEBUG - Event request-created.s3.HeadObject: calling handler <function add_retry_headers at 0x000002659C5972E0>
+2024-06-24 19:12:17,440 - DEBUG - Sending http request: <AWSPreparedRequest stream_output=False, method=HEAD, url=https://youtube-project-testing-vaibhav.s3.ap-south-1.amazonaws.com/sales_data/india_companies.csv, headers={'User-Agent': b'Boto3/1.34.131 md/Botocore#1.34.131 ua/2.0 os/windows#10 md/arch#amd64 lang/python#3.11.6 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.34.131', 'X-Amz-Date': b'20240624T134217Z', 'X-Amz-Content-SHA256': b'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIA2UC3A4V7JS25LG77/20240624/ap-south-1/s3/aws4_request, SignedHeaders=host;x-amz-content-sha256;x-amz-date, Signature=1db3a771a79d9c7d6941d3054a019a44fec6ef0164563e414ba724c3e749d7f8', 'amz-sdk-invocation-id': b'd9623fe8-ca13-4914-a47c-52379eb817c9', 'amz-sdk-request': b'attempt=1'}>
+2024-06-24 19:12:17,440 - DEBUG - Certificate path: C:\Users\hp\PycharmProjects\youtube_ideas\youtube_de_project1\vaibhav-venv\Lib\site-packages\botocore\cacert.pem
+2024-06-24 19:12:17,470 - DEBUG - https://youtube-project-testing-vaibhav.s3.ap-south-1.amazonaws.com:443 "HEAD /sales_data/india_companies.csv HTTP/11" 200 0
+2024-06-24 19:12:17,470 - DEBUG - Response headers: {'x-amz-id-2': '9SbGjEhaildRMtyNx2XwKzA4EsctJOhmbuPTto0vVNKEoSizYzZGb/vSdpWDdzl4W12g7pQSwb5R0l1hdn4biA==', 'x-amz-request-id': 'SG3MTZ7JJ6CVB8SM', 'Date': 'Mon, 24 Jun 2024 13:42:19 GMT', 'Last-Modified': 'Mon, 24 Jun 2024 12:33:28 GMT', 'ETag': '"8c426dfc339fb178a70ea79bb71d98cb"', 'x-amz-server-side-encryption': 'AES256', 'Accept-Ranges': 'bytes', 'Content-Type': 'binary/octet-stream', 'Server': 'AmazonS3', 'Content-Length': '6163'}
+2024-06-24 19:12:17,470 - DEBUG - Response body:
+b''
+2024-06-24 19:12:17,471 - DEBUG - Event needs-retry.s3.HeadObject: calling handler <botocore.retryhandler.RetryHandler object at 0x000002659C0E5050>
+2024-06-24 19:12:17,471 - DEBUG - No retry needed.
+2024-06-24 19:12:17,471 - DEBUG - Event needs-retry.s3.HeadObject: calling handler <bound method S3RegionRedirectorv2.redirect_from_error of <botocore.utils.S3RegionRedirectorv2 object at 0x000002659E0331D0>>
+2024-06-24 19:12:17,472 - DEBUG - Submitting task ImmediatelyWriteIOGetObjectTask(transfer_id=0, {'bucket': 'youtube-project-testing-vaibhav', 'key': 'sales_data/india_companies.csv', 'extra_args': {}}) to executor <s3transfer.futures.BoundedExecutor object at 0x000002659C113810> for transfer request: 0.
+2024-06-24 19:12:17,472 - DEBUG - Acquiring 0
+2024-06-24 19:12:17,472 - DEBUG - ImmediatelyWriteIOGetObjectTask(transfer_id=0, {'bucket': 'youtube-project-testing-vaibhav', 'key': 'sales_data/india_companies.csv', 'extra_args': {}}) about to wait for the following futures []
+2024-06-24 19:12:17,473 - DEBUG - ImmediatelyWriteIOGetObjectTask(transfer_id=0, {'bucket': 'youtube-project-testing-vaibhav', 'key': 'sales_data/india_companies.csv', 'extra_args': {}}) done waiting for dependent futures
+2024-06-24 19:12:17,473 - DEBUG - Executing task ImmediatelyWriteIOGetObjectTask(transfer_id=0, {'bucket': 'youtube-project-testing-vaibhav', 'key': 'sales_data/india_companies.csv', 'extra_args': {}}) with kwargs {'client': <botocore.client.S3 object at 0x000002659C32B010>, 'bucket': 'youtube-project-testing-vaibhav', 'key': 'sales_data/india_companies.csv', 'fileobj': <s3transfer.utils.DeferredOpenFile object at 0x000002659F3DE310>, 'extra_args': {}, 'callbacks': [], 'max_attempts': 5, 'download_output_manager': <s3transfer.download.DownloadFilenameOutputManager object at 0x000002659F3DD490>, 'io_chunksize': 262144, 'bandwidth_limiter': None}
+2024-06-24 19:12:17,473 - DEBUG - Event before-parameter-build.s3.GetObject: calling handler <function sse_md5 at 0x000002659C595260>
+2024-06-24 19:12:17,473 - DEBUG - Event before-parameter-build.s3.GetObject: calling handler <function validate_bucket_name at 0x000002659C5951C0>
+2024-06-24 19:12:17,473 - DEBUG - Event before-parameter-build.s3.GetObject: calling handler <function remove_bucket_from_url_paths_from_model at 0x000002659C597380>
+2024-06-24 19:12:17,473 - DEBUG - Event before-parameter-build.s3.GetObject: calling handler <bound method S3RegionRedirectorv2.annotate_request_context of <botocore.utils.S3RegionRedirectorv2 object at 0x000002659E0331D0>>
+2024-06-24 19:12:17,473 - DEBUG - Event before-parameter-build.s3.GetObject: calling handler <bound method ClientCreator._inject_s3_input_parameters of <botocore.client.ClientCreator object at 0x000002659DAC6890>>
+2024-06-24 19:12:17,473 - DEBUG - Releasing acquire 0/None
+2024-06-24 19:12:17,473 - DEBUG - Event before-parameter-build.s3.GetObject: calling handler <function generate_idempotent_uuid at 0x000002659C594FE0>
+2024-06-24 19:12:17,474 - DEBUG - Event before-endpoint-resolution.s3: calling handler <function customize_endpoint_resolver_builtins at 0x000002659C597560>
+2024-06-24 19:12:17,474 - DEBUG - Event before-endpoint-resolution.s3: calling handler <bound method S3RegionRedirectorv2.redirect_from_cache of <botocore.utils.S3RegionRedirectorv2 object at 0x000002659E0331D0>>
+2024-06-24 19:12:17,474 - DEBUG - Calling endpoint provider with parameters: {'Bucket': 'youtube-project-testing-vaibhav', 'Region': 'ap-south-1', 'UseFIPS': False, 'UseDualStack': False, 'ForcePathStyle': False, 'Accelerate': False, 'UseGlobalEndpoint': True, 'Key': 'sales_data/india_companies.csv', 'DisableMultiRegionAccessPoints': False, 'UseArnRegion': True}
+2024-06-24 19:12:17,474 - DEBUG - Endpoint provider result: https://youtube-project-testing-vaibhav.s3.ap-south-1.amazonaws.com
+2024-06-24 19:12:17,474 - DEBUG - Selecting from endpoint provider's list of auth schemes: "sigv4". User selected auth scheme is: "None"
+2024-06-24 19:12:17,474 - DEBUG - Selected auth type "v4" as "v4" with signing context params: {'region': 'ap-south-1', 'signing_name': 's3', 'disableDoubleEncoding': True}
+2024-06-24 19:12:17,474 - DEBUG - Event before-call.s3.GetObject: calling handler <function add_expect_header at 0x000002659C595580>
+2024-06-24 19:12:17,474 - DEBUG - Event before-call.s3.GetObject: calling handler <bound method S3ExpressIdentityResolver.apply_signing_cache_key of <botocore.utils.S3ExpressIdentityResolver object at 0x000002659DBB8D10>>
+2024-06-24 19:12:17,475 - DEBUG - Event before-call.s3.GetObject: calling handler <function add_recursion_detection_header at 0x000002659C567920>
+2024-06-24 19:12:17,475 - DEBUG - Event before-call.s3.GetObject: calling handler <function inject_api_version_header_if_needed at 0x000002659C596AC0>
+2024-06-24 19:12:17,475 - DEBUG - Making request for OperationModel(name=GetObject) with params: {'url_path': '/sales_data/india_companies.csv', 'query_string': {}, 'method': 'GET', 'headers': {'User-Agent': 'Boto3/1.34.131 md/Botocore#1.34.131 ua/2.0 os/windows#10 md/arch#amd64 lang/python#3.11.6 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.34.131'}, 'body': b'', 'auth_path': '/youtube-project-testing-vaibhav/sales_data/india_companies.csv', 'url': 'https://youtube-project-testing-vaibhav.s3.ap-south-1.amazonaws.com/sales_data/india_companies.csv', 'context': {'client_region': 'us-east-1', 'client_config': <botocore.config.Config object at 0x000002659E01B790>, 'has_streaming_input': False, 'auth_type': 'v4', 's3_redirect': {'redirected': False, 'bucket': 'youtube-project-testing-vaibhav', 'params': {'Bucket': 'youtube-project-testing-vaibhav', 'Key': 'sales_data/india_companies.csv'}}, 'input_params': {'Bucket': 'youtube-project-testing-vaibhav', 'Key': 'sales_data/india_companies.csv'}, 'signing': {'region': 'ap-south-1', 'signing_name': 's3', 'disableDoubleEncoding': True}, 'endpoint_properties': {'authSchemes': [{'disableDoubleEncoding': True, 'name': 'sigv4', 'signingName': 's3', 'signingRegion': 'ap-south-1'}]}}}
+2024-06-24 19:12:17,475 - DEBUG - Event request-created.s3.GetObject: calling handler <function signal_not_transferring at 0x000002659DF965C0>
+2024-06-24 19:12:17,475 - DEBUG - Event request-created.s3.GetObject: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x000002659E01B750>>
+2024-06-24 19:12:17,475 - DEBUG - Event choose-signer.s3.GetObject: calling handler <bound method ClientCreator._default_s3_presign_to_sigv2 of <botocore.client.ClientCreator object at 0x000002659DAC6890>>
+2024-06-24 19:12:17,475 - DEBUG - Event choose-signer.s3.GetObject: calling handler <function set_operation_specific_signer at 0x000002659C594EA0>
+2024-06-24 19:12:17,475 - DEBUG - Event before-sign.s3.GetObject: calling handler <function remove_arn_from_signing_path at 0x000002659C5974C0>
+2024-06-24 19:12:17,475 - DEBUG - Event before-sign.s3.GetObject: calling handler <bound method S3ExpressIdentityResolver.resolve_s3express_identity of <botocore.utils.S3ExpressIdentityResolver object at 0x000002659DBB8D10>>
+2024-06-24 19:12:17,475 - DEBUG - Calculating signature using v4 auth.
+2024-06-24 19:12:17,475 - DEBUG - CanonicalRequest:
+GET
+/sales_data/india_companies.csv
+
+host:youtube-project-testing-vaibhav.s3.ap-south-1.amazonaws.com
+x-amz-content-sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+x-amz-date:20240624T134217Z
+
+host;x-amz-content-sha256;x-amz-date
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+2024-06-24 19:12:17,475 - DEBUG - StringToSign:
+AWS4-HMAC-SHA256
+20240624T134217Z
+20240624/ap-south-1/s3/aws4_request
+486ee8643f2d95c654f0f27ba34536a1cf8dc377292587a5c50d1869d735ee88
+2024-06-24 19:12:17,475 - DEBUG - Signature:
+b216937a5b450201d941425f8035fabaa4461132fe9ca2ce6778416969f2b3bb
+2024-06-24 19:12:17,476 - DEBUG - Event request-created.s3.GetObject: calling handler <function signal_transferring at 0x000002659DF96660>
+2024-06-24 19:12:17,476 - DEBUG - Event request-created.s3.GetObject: calling handler <function add_retry_headers at 0x000002659C5972E0>
+2024-06-24 19:12:17,476 - DEBUG - Sending http request: <AWSPreparedRequest stream_output=True, method=GET, url=https://youtube-project-testing-vaibhav.s3.ap-south-1.amazonaws.com/sales_data/india_companies.csv, headers={'User-Agent': b'Boto3/1.34.131 md/Botocore#1.34.131 ua/2.0 os/windows#10 md/arch#amd64 lang/python#3.11.6 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.34.131', 'X-Amz-Date': b'20240624T134217Z', 'X-Amz-Content-SHA256': b'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIA2UC3A4V7JS25LG77/20240624/ap-south-1/s3/aws4_request, SignedHeaders=host;x-amz-content-sha256;x-amz-date, Signature=b216937a5b450201d941425f8035fabaa4461132fe9ca2ce6778416969f2b3bb', 'amz-sdk-invocation-id': b'c5de5ef9-538a-464d-b2ed-e917e731ecae', 'amz-sdk-request': b'attempt=1'}>
+2024-06-24 19:12:17,476 - DEBUG - Certificate path: C:\Users\hp\PycharmProjects\youtube_ideas\youtube_de_project1\vaibhav-venv\Lib\site-packages\botocore\cacert.pem
+2024-06-24 19:12:17,535 - DEBUG - https://youtube-project-testing-vaibhav.s3.ap-south-1.amazonaws.com:443 "GET /sales_data/india_companies.csv HTTP/11" 200 6163
+2024-06-24 19:12:17,535 - DEBUG - Response headers: {'x-amz-id-2': 'QAgC3k79vMRjprqa1QN6yYnFRNdXueMu2Ckz8wiTqcPJEuAYf+4fur7goEzemBSwsjd1mcKS+9vAWh7YftzqwQ==', 'x-amz-request-id': 'SG3Y6QGFTAMJ0QW0', 'Date': 'Mon, 24 Jun 2024 13:42:19 GMT', 'Last-Modified': 'Mon, 24 Jun 2024 12:33:28 GMT', 'ETag': '"8c426dfc339fb178a70ea79bb71d98cb"', 'x-amz-server-side-encryption': 'AES256', 'Accept-Ranges': 'bytes', 'Content-Type': 'binary/octet-stream', 'Server': 'AmazonS3', 'Content-Length': '6163'}
+2024-06-24 19:12:17,535 - DEBUG - Response body:
+<botocore.response.StreamingBody object at 0x000002659F3E41C0>
+2024-06-24 19:12:17,536 - DEBUG - Event needs-retry.s3.GetObject: calling handler <botocore.retryhandler.RetryHandler object at 0x000002659C0E5050>
+2024-06-24 19:12:17,536 - DEBUG - No retry needed.
+2024-06-24 19:12:17,536 - DEBUG - Event needs-retry.s3.GetObject: calling handler <bound method S3RegionRedirectorv2.redirect_from_error of <botocore.utils.S3RegionRedirectorv2 object at 0x000002659E0331D0>>
+2024-06-24 19:12:17,536 - DEBUG - IOWriteTask(transfer_id=0, {'offset': 0}) about to wait for the following futures []
+2024-06-24 19:12:17,536 - DEBUG - IOWriteTask(transfer_id=0, {'offset': 0}) done waiting for dependent futures
+2024-06-24 19:12:17,536 - DEBUG - Executing task IOWriteTask(transfer_id=0, {'offset': 0}) with kwargs {'fileobj': <s3transfer.utils.DeferredOpenFile object at 0x000002659F3DE310>, 'offset': 0}
+2024-06-24 19:12:17,537 - DEBUG - IORenameFileTask(transfer_id=0, {'final_filename': 'C:\\Users\\hp\\Documents\\data_engineering\\spark_data\\file_from_s3\\india_companies.csv'}) about to wait for the following futures []
+2024-06-24 19:12:17,537 - DEBUG - IORenameFileTask(transfer_id=0, {'final_filename': 'C:\\Users\\hp\\Documents\\data_engineering\\spark_data\\file_from_s3\\india_companies.csv'}) done waiting for dependent futures
+2024-06-24 19:12:17,537 - DEBUG - Executing task IORenameFileTask(transfer_id=0, {'final_filename': 'C:\\Users\\hp\\Documents\\data_engineering\\spark_data\\file_from_s3\\india_companies.csv'}) with kwargs {'fileobj': <s3transfer.utils.DeferredOpenFile object at 0x000002659F3DE310>, 'final_filename': 'C:\\Users\\hp\\Documents\\data_engineering\\spark_data\\file_from_s3\\india_companies.csv', 'osutil': <s3transfer.utils.OSUtils object at 0x000002659F38CF10>}
+2024-06-24 19:12:17,538 - DEBUG - Releasing acquire 0/None
+2024-06-24 19:12:17,538 - INFO - File name movie_review1.csv 
+2024-06-24 19:12:17,538 - DEBUG - Opting out of CRT Transfer Manager. Preferred client: auto, CRT available: False, Instance Optimized: False.
+2024-06-24 19:12:17,538 - DEBUG - Using default client. pid: 18236, thread: 15628
+2024-06-24 19:12:17,539 - DEBUG - Acquiring 0
+2024-06-24 19:12:17,539 - DEBUG - DownloadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x000002659F3DD550>}) about to wait for the following futures []
+2024-06-24 19:12:17,539 - DEBUG - DownloadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x000002659F3DD550>}) done waiting for dependent futures
+2024-06-24 19:12:17,539 - DEBUG - Executing task DownloadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x000002659F3DD550>}) with kwargs {'client': <botocore.client.S3 object at 0x000002659C32B010>, 'config': <boto3.s3.transfer.TransferConfig object at 0x000002659D332B10>, 'osutil': <s3transfer.utils.OSUtils object at 0x000002659E038F50>, 'request_executor': <s3transfer.futures.BoundedExecutor object at 0x000002659F3CB710>, 'transfer_future': <s3transfer.futures.TransferFuture object at 0x000002659F3DD550>, 'io_executor': <s3transfer.futures.BoundedExecutor object at 0x000002659F38C7D0>}
+2024-06-24 19:12:17,539 - DEBUG - Event before-parameter-build.s3.HeadObject: calling handler <function sse_md5 at 0x000002659C595260>
+2024-06-24 19:12:17,539 - DEBUG - Event before-parameter-build.s3.HeadObject: calling handler <function validate_bucket_name at 0x000002659C5951C0>
+2024-06-24 19:12:17,539 - DEBUG - Event before-parameter-build.s3.HeadObject: calling handler <function remove_bucket_from_url_paths_from_model at 0x000002659C597380>
+2024-06-24 19:12:17,539 - DEBUG - Event before-parameter-build.s3.HeadObject: calling handler <bound method S3RegionRedirectorv2.annotate_request_context of <botocore.utils.S3RegionRedirectorv2 object at 0x000002659E0331D0>>
+2024-06-24 19:12:17,539 - DEBUG - Event before-parameter-build.s3.HeadObject: calling handler <bound method ClientCreator._inject_s3_input_parameters of <botocore.client.ClientCreator object at 0x000002659DAC6890>>
+2024-06-24 19:12:17,539 - DEBUG - Event before-parameter-build.s3.HeadObject: calling handler <function generate_idempotent_uuid at 0x000002659C594FE0>
+2024-06-24 19:12:17,539 - DEBUG - Event before-endpoint-resolution.s3: calling handler <function customize_endpoint_resolver_builtins at 0x000002659C597560>
+2024-06-24 19:12:17,539 - DEBUG - Event before-endpoint-resolution.s3: calling handler <bound method S3RegionRedirectorv2.redirect_from_cache of <botocore.utils.S3RegionRedirectorv2 object at 0x000002659E0331D0>>
+2024-06-24 19:12:17,539 - DEBUG - Calling endpoint provider with parameters: {'Bucket': 'youtube-project-testing-vaibhav', 'Region': 'ap-south-1', 'UseFIPS': False, 'UseDualStack': False, 'ForcePathStyle': False, 'Accelerate': False, 'UseGlobalEndpoint': True, 'Key': 'sales_data/movie_review1.csv', 'DisableMultiRegionAccessPoints': False, 'UseArnRegion': True}
+2024-06-24 19:12:17,540 - DEBUG - Endpoint provider result: https://youtube-project-testing-vaibhav.s3.ap-south-1.amazonaws.com
+2024-06-24 19:12:17,540 - DEBUG - Selecting from endpoint provider's list of auth schemes: "sigv4". User selected auth scheme is: "None"
+2024-06-24 19:12:17,540 - DEBUG - Selected auth type "v4" as "v4" with signing context params: {'region': 'ap-south-1', 'signing_name': 's3', 'disableDoubleEncoding': True}
+2024-06-24 19:12:17,540 - DEBUG - Event before-call.s3.HeadObject: calling handler <function add_expect_header at 0x000002659C595580>
+2024-06-24 19:12:17,540 - DEBUG - Event before-call.s3.HeadObject: calling handler <bound method S3ExpressIdentityResolver.apply_signing_cache_key of <botocore.utils.S3ExpressIdentityResolver object at 0x000002659DBB8D10>>
+2024-06-24 19:12:17,540 - DEBUG - Event before-call.s3.HeadObject: calling handler <function add_recursion_detection_header at 0x000002659C567920>
+2024-06-24 19:12:17,540 - DEBUG - Event before-call.s3.HeadObject: calling handler <function inject_api_version_header_if_needed at 0x000002659C596AC0>
+2024-06-24 19:12:17,540 - DEBUG - Making request for OperationModel(name=HeadObject) with params: {'url_path': '/sales_data/movie_review1.csv', 'query_string': {}, 'method': 'HEAD', 'headers': {'User-Agent': 'Boto3/1.34.131 md/Botocore#1.34.131 ua/2.0 os/windows#10 md/arch#amd64 lang/python#3.11.6 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.34.131'}, 'body': b'', 'auth_path': '/youtube-project-testing-vaibhav/sales_data/movie_review1.csv', 'url': 'https://youtube-project-testing-vaibhav.s3.ap-south-1.amazonaws.com/sales_data/movie_review1.csv', 'context': {'client_region': 'us-east-1', 'client_config': <botocore.config.Config object at 0x000002659E01B790>, 'has_streaming_input': False, 'auth_type': 'v4', 's3_redirect': {'redirected': False, 'bucket': 'youtube-project-testing-vaibhav', 'params': {'Bucket': 'youtube-project-testing-vaibhav', 'Key': 'sales_data/movie_review1.csv'}}, 'input_params': {'Bucket': 'youtube-project-testing-vaibhav', 'Key': 'sales_data/movie_review1.csv'}, 'signing': {'region': 'ap-south-1', 'signing_name': 's3', 'disableDoubleEncoding': True}, 'endpoint_properties': {'authSchemes': [{'disableDoubleEncoding': True, 'name': 'sigv4', 'signingName': 's3', 'signingRegion': 'ap-south-1'}]}}}
+2024-06-24 19:12:17,540 - DEBUG - Event request-created.s3.HeadObject: calling handler <function signal_not_transferring at 0x000002659DF965C0>
+2024-06-24 19:12:17,540 - DEBUG - Event request-created.s3.HeadObject: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x000002659E01B750>>
+2024-06-24 19:12:17,540 - DEBUG - Event choose-signer.s3.HeadObject: calling handler <bound method ClientCreator._default_s3_presign_to_sigv2 of <botocore.client.ClientCreator object at 0x000002659DAC6890>>
+2024-06-24 19:12:17,540 - DEBUG - Event choose-signer.s3.HeadObject: calling handler <function set_operation_specific_signer at 0x000002659C594EA0>
+2024-06-24 19:12:17,540 - DEBUG - Event before-sign.s3.HeadObject: calling handler <function remove_arn_from_signing_path at 0x000002659C5974C0>
+2024-06-24 19:12:17,540 - DEBUG - Event before-sign.s3.HeadObject: calling handler <bound method S3ExpressIdentityResolver.resolve_s3express_identity of <botocore.utils.S3ExpressIdentityResolver object at 0x000002659DBB8D10>>
+2024-06-24 19:12:17,540 - DEBUG - Calculating signature using v4 auth.
+2024-06-24 19:12:17,540 - DEBUG - CanonicalRequest:
+HEAD
+/sales_data/movie_review1.csv
+
+host:youtube-project-testing-vaibhav.s3.ap-south-1.amazonaws.com
+x-amz-content-sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+x-amz-date:20240624T134217Z
+
+host;x-amz-content-sha256;x-amz-date
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+2024-06-24 19:12:17,540 - DEBUG - StringToSign:
+AWS4-HMAC-SHA256
+20240624T134217Z
+20240624/ap-south-1/s3/aws4_request
+b05791240d59f47c6293eb336691de8f92f4faf6b3a209e80015f0301c128e81
+2024-06-24 19:12:17,541 - DEBUG - Signature:
+8126fb04ed5718af519180944f07a0ef9d39dbcec385f673a4838f09632ed536
+2024-06-24 19:12:17,541 - DEBUG - Event request-created.s3.HeadObject: calling handler <function signal_transferring at 0x000002659DF96660>
+2024-06-24 19:12:17,541 - DEBUG - Event request-created.s3.HeadObject: calling handler <function add_retry_headers at 0x000002659C5972E0>
+2024-06-24 19:12:17,541 - DEBUG - Sending http request: <AWSPreparedRequest stream_output=False, method=HEAD, url=https://youtube-project-testing-vaibhav.s3.ap-south-1.amazonaws.com/sales_data/movie_review1.csv, headers={'User-Agent': b'Boto3/1.34.131 md/Botocore#1.34.131 ua/2.0 os/windows#10 md/arch#amd64 lang/python#3.11.6 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.34.131', 'X-Amz-Date': b'20240624T134217Z', 'X-Amz-Content-SHA256': b'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIA2UC3A4V7JS25LG77/20240624/ap-south-1/s3/aws4_request, SignedHeaders=host;x-amz-content-sha256;x-amz-date, Signature=8126fb04ed5718af519180944f07a0ef9d39dbcec385f673a4838f09632ed536', 'amz-sdk-invocation-id': b'68f77fb8-51e7-4be4-94c5-fcc1f32bdb6b', 'amz-sdk-request': b'attempt=1'}>
+2024-06-24 19:12:17,541 - DEBUG - Certificate path: C:\Users\hp\PycharmProjects\youtube_ideas\youtube_de_project1\vaibhav-venv\Lib\site-packages\botocore\cacert.pem
+2024-06-24 19:12:17,568 - DEBUG - https://youtube-project-testing-vaibhav.s3.ap-south-1.amazonaws.com:443 "HEAD /sales_data/movie_review1.csv HTTP/11" 200 0
+2024-06-24 19:12:17,568 - DEBUG - Response headers: {'x-amz-id-2': 'yFuAKUACgpQnQ1aCRXC/7F66e5bex+BdIMrfqACPoDRWsa2bZQasjwtdVfOCn6MtleFcEMM4Tu83Fks64deGaQ==', 'x-amz-request-id': 'SG3RZ8PGMEND8AJG', 'Date': 'Mon, 24 Jun 2024 13:42:19 GMT', 'Last-Modified': 'Mon, 24 Jun 2024 12:33:29 GMT', 'ETag': '"11da0808edb83e197b57739ab04a2520"', 'x-amz-server-side-encryption': 'AES256', 'Accept-Ranges': 'bytes', 'Content-Type': 'binary/octet-stream', 'Server': 'AmazonS3', 'Content-Length': '1043'}
+2024-06-24 19:12:17,568 - DEBUG - Response body:
+b''
+2024-06-24 19:12:17,569 - DEBUG - Event needs-retry.s3.HeadObject: calling handler <botocore.retryhandler.RetryHandler object at 0x000002659C0E5050>
+2024-06-24 19:12:17,569 - DEBUG - No retry needed.
+2024-06-24 19:12:17,569 - DEBUG - Event needs-retry.s3.HeadObject: calling handler <bound method S3RegionRedirectorv2.redirect_from_error of <botocore.utils.S3RegionRedirectorv2 object at 0x000002659E0331D0>>
+2024-06-24 19:12:17,569 - DEBUG - Submitting task ImmediatelyWriteIOGetObjectTask(transfer_id=0, {'bucket': 'youtube-project-testing-vaibhav', 'key': 'sales_data/movie_review1.csv', 'extra_args': {}}) to executor <s3transfer.futures.BoundedExecutor object at 0x000002659F3CB710> for transfer request: 0.
+2024-06-24 19:12:17,569 - DEBUG - Acquiring 0
+2024-06-24 19:12:17,570 - DEBUG - ImmediatelyWriteIOGetObjectTask(transfer_id=0, {'bucket': 'youtube-project-testing-vaibhav', 'key': 'sales_data/movie_review1.csv', 'extra_args': {}}) about to wait for the following futures []
+2024-06-24 19:12:17,570 - DEBUG - ImmediatelyWriteIOGetObjectTask(transfer_id=0, {'bucket': 'youtube-project-testing-vaibhav', 'key': 'sales_data/movie_review1.csv', 'extra_args': {}}) done waiting for dependent futures
+2024-06-24 19:12:17,570 - DEBUG - Releasing acquire 0/None
+2024-06-24 19:12:17,570 - DEBUG - Executing task ImmediatelyWriteIOGetObjectTask(transfer_id=0, {'bucket': 'youtube-project-testing-vaibhav', 'key': 'sales_data/movie_review1.csv', 'extra_args': {}}) with kwargs {'client': <botocore.client.S3 object at 0x000002659C32B010>, 'bucket': 'youtube-project-testing-vaibhav', 'key': 'sales_data/movie_review1.csv', 'fileobj': <s3transfer.utils.DeferredOpenFile object at 0x000002659F3DE390>, 'extra_args': {}, 'callbacks': [], 'max_attempts': 5, 'download_output_manager': <s3transfer.download.DownloadFilenameOutputManager object at 0x000002659F3DD650>, 'io_chunksize': 262144, 'bandwidth_limiter': None}
+2024-06-24 19:12:17,570 - DEBUG - Event before-parameter-build.s3.GetObject: calling handler <function sse_md5 at 0x000002659C595260>
+2024-06-24 19:12:17,570 - DEBUG - Event before-parameter-build.s3.GetObject: calling handler <function validate_bucket_name at 0x000002659C5951C0>
+2024-06-24 19:12:17,570 - DEBUG - Event before-parameter-build.s3.GetObject: calling handler <function remove_bucket_from_url_paths_from_model at 0x000002659C597380>
+2024-06-24 19:12:17,570 - DEBUG - Event before-parameter-build.s3.GetObject: calling handler <bound method S3RegionRedirectorv2.annotate_request_context of <botocore.utils.S3RegionRedirectorv2 object at 0x000002659E0331D0>>
+2024-06-24 19:12:17,570 - DEBUG - Event before-parameter-build.s3.GetObject: calling handler <bound method ClientCreator._inject_s3_input_parameters of <botocore.client.ClientCreator object at 0x000002659DAC6890>>
+2024-06-24 19:12:17,570 - DEBUG - Event before-parameter-build.s3.GetObject: calling handler <function generate_idempotent_uuid at 0x000002659C594FE0>
+2024-06-24 19:12:17,570 - DEBUG - Event before-endpoint-resolution.s3: calling handler <function customize_endpoint_resolver_builtins at 0x000002659C597560>
+2024-06-24 19:12:17,570 - DEBUG - Event before-endpoint-resolution.s3: calling handler <bound method S3RegionRedirectorv2.redirect_from_cache of <botocore.utils.S3RegionRedirectorv2 object at 0x000002659E0331D0>>
+2024-06-24 19:12:17,570 - DEBUG - Calling endpoint provider with parameters: {'Bucket': 'youtube-project-testing-vaibhav', 'Region': 'ap-south-1', 'UseFIPS': False, 'UseDualStack': False, 'ForcePathStyle': False, 'Accelerate': False, 'UseGlobalEndpoint': True, 'Key': 'sales_data/movie_review1.csv', 'DisableMultiRegionAccessPoints': False, 'UseArnRegion': True}
+2024-06-24 19:12:17,570 - DEBUG - Endpoint provider result: https://youtube-project-testing-vaibhav.s3.ap-south-1.amazonaws.com
+2024-06-24 19:12:17,570 - DEBUG - Selecting from endpoint provider's list of auth schemes: "sigv4". User selected auth scheme is: "None"
+2024-06-24 19:12:17,570 - DEBUG - Selected auth type "v4" as "v4" with signing context params: {'region': 'ap-south-1', 'signing_name': 's3', 'disableDoubleEncoding': True}
+2024-06-24 19:12:17,571 - DEBUG - Event before-call.s3.GetObject: calling handler <function add_expect_header at 0x000002659C595580>
+2024-06-24 19:12:17,571 - DEBUG - Event before-call.s3.GetObject: calling handler <bound method S3ExpressIdentityResolver.apply_signing_cache_key of <botocore.utils.S3ExpressIdentityResolver object at 0x000002659DBB8D10>>
+2024-06-24 19:12:17,571 - DEBUG - Event before-call.s3.GetObject: calling handler <function add_recursion_detection_header at 0x000002659C567920>
+2024-06-24 19:12:17,571 - DEBUG - Event before-call.s3.GetObject: calling handler <function inject_api_version_header_if_needed at 0x000002659C596AC0>
+2024-06-24 19:12:17,571 - DEBUG - Making request for OperationModel(name=GetObject) with params: {'url_path': '/sales_data/movie_review1.csv', 'query_string': {}, 'method': 'GET', 'headers': {'User-Agent': 'Boto3/1.34.131 md/Botocore#1.34.131 ua/2.0 os/windows#10 md/arch#amd64 lang/python#3.11.6 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.34.131'}, 'body': b'', 'auth_path': '/youtube-project-testing-vaibhav/sales_data/movie_review1.csv', 'url': 'https://youtube-project-testing-vaibhav.s3.ap-south-1.amazonaws.com/sales_data/movie_review1.csv', 'context': {'client_region': 'us-east-1', 'client_config': <botocore.config.Config object at 0x000002659E01B790>, 'has_streaming_input': False, 'auth_type': 'v4', 's3_redirect': {'redirected': False, 'bucket': 'youtube-project-testing-vaibhav', 'params': {'Bucket': 'youtube-project-testing-vaibhav', 'Key': 'sales_data/movie_review1.csv'}}, 'input_params': {'Bucket': 'youtube-project-testing-vaibhav', 'Key': 'sales_data/movie_review1.csv'}, 'signing': {'region': 'ap-south-1', 'signing_name': 's3', 'disableDoubleEncoding': True}, 'endpoint_properties': {'authSchemes': [{'disableDoubleEncoding': True, 'name': 'sigv4', 'signingName': 's3', 'signingRegion': 'ap-south-1'}]}}}
+2024-06-24 19:12:17,571 - DEBUG - Event request-created.s3.GetObject: calling handler <function signal_not_transferring at 0x000002659DF965C0>
+2024-06-24 19:12:17,571 - DEBUG - Event request-created.s3.GetObject: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x000002659E01B750>>
+2024-06-24 19:12:17,571 - DEBUG - Event choose-signer.s3.GetObject: calling handler <bound method ClientCreator._default_s3_presign_to_sigv2 of <botocore.client.ClientCreator object at 0x000002659DAC6890>>
+2024-06-24 19:12:17,571 - DEBUG - Event choose-signer.s3.GetObject: calling handler <function set_operation_specific_signer at 0x000002659C594EA0>
+2024-06-24 19:12:17,571 - DEBUG - Event before-sign.s3.GetObject: calling handler <function remove_arn_from_signing_path at 0x000002659C5974C0>
+2024-06-24 19:12:17,571 - DEBUG - Event before-sign.s3.GetObject: calling handler <bound method S3ExpressIdentityResolver.resolve_s3express_identity of <botocore.utils.S3ExpressIdentityResolver object at 0x000002659DBB8D10>>
+2024-06-24 19:12:17,571 - DEBUG - Calculating signature using v4 auth.
+2024-06-24 19:12:17,571 - DEBUG - CanonicalRequest:
+GET
+/sales_data/movie_review1.csv
+
+host:youtube-project-testing-vaibhav.s3.ap-south-1.amazonaws.com
+x-amz-content-sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+x-amz-date:20240624T134217Z
+
+host;x-amz-content-sha256;x-amz-date
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+2024-06-24 19:12:17,571 - DEBUG - StringToSign:
+AWS4-HMAC-SHA256
+20240624T134217Z
+20240624/ap-south-1/s3/aws4_request
+4eb53a4d46682e88ef04c3e24909dc02f44dac82c641a72c7ce817679042c069
+2024-06-24 19:12:17,571 - DEBUG - Signature:
+587198a0a0c2997352f0b215100e9c7f3ef757133a1d88e54d8c33fe1fe78434
+2024-06-24 19:12:17,571 - DEBUG - Event request-created.s3.GetObject: calling handler <function signal_transferring at 0x000002659DF96660>
+2024-06-24 19:12:17,571 - DEBUG - Event request-created.s3.GetObject: calling handler <function add_retry_headers at 0x000002659C5972E0>
+2024-06-24 19:12:17,571 - DEBUG - Sending http request: <AWSPreparedRequest stream_output=True, method=GET, url=https://youtube-project-testing-vaibhav.s3.ap-south-1.amazonaws.com/sales_data/movie_review1.csv, headers={'User-Agent': b'Boto3/1.34.131 md/Botocore#1.34.131 ua/2.0 os/windows#10 md/arch#amd64 lang/python#3.11.6 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.34.131', 'X-Amz-Date': b'20240624T134217Z', 'X-Amz-Content-SHA256': b'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIA2UC3A4V7JS25LG77/20240624/ap-south-1/s3/aws4_request, SignedHeaders=host;x-amz-content-sha256;x-amz-date, Signature=587198a0a0c2997352f0b215100e9c7f3ef757133a1d88e54d8c33fe1fe78434', 'amz-sdk-invocation-id': b'a149ca55-7d31-4185-ae1b-6ab56b9b936e', 'amz-sdk-request': b'attempt=1'}>
+2024-06-24 19:12:17,571 - DEBUG - Certificate path: C:\Users\hp\PycharmProjects\youtube_ideas\youtube_de_project1\vaibhav-venv\Lib\site-packages\botocore\cacert.pem
+2024-06-24 19:12:17,628 - DEBUG - https://youtube-project-testing-vaibhav.s3.ap-south-1.amazonaws.com:443 "GET /sales_data/movie_review1.csv HTTP/11" 200 1043
+2024-06-24 19:12:17,628 - DEBUG - Response headers: {'x-amz-id-2': 'sQ/ZPa6Z124YLuAZJPZB7VbxKtNguuQG9DzxSBnyMFEwSJxQWbrtT6stC+c0NlP4PGVtfNTid6C6I/p8tbK65g==', 'x-amz-request-id': 'SG3WQP6DW7SAW3YC', 'Date': 'Mon, 24 Jun 2024 13:42:19 GMT', 'Last-Modified': 'Mon, 24 Jun 2024 12:33:29 GMT', 'ETag': '"11da0808edb83e197b57739ab04a2520"', 'x-amz-server-side-encryption': 'AES256', 'Accept-Ranges': 'bytes', 'Content-Type': 'binary/octet-stream', 'Server': 'AmazonS3', 'Content-Length': '1043'}
+2024-06-24 19:12:17,628 - DEBUG - Response body:
+<botocore.response.StreamingBody object at 0x000002659E003D00>
+2024-06-24 19:12:17,629 - DEBUG - Event needs-retry.s3.GetObject: calling handler <botocore.retryhandler.RetryHandler object at 0x000002659C0E5050>
+2024-06-24 19:12:17,629 - DEBUG - No retry needed.
+2024-06-24 19:12:17,629 - DEBUG - Event needs-retry.s3.GetObject: calling handler <bound method S3RegionRedirectorv2.redirect_from_error of <botocore.utils.S3RegionRedirectorv2 object at 0x000002659E0331D0>>
+2024-06-24 19:12:17,630 - DEBUG - IOWriteTask(transfer_id=0, {'offset': 0}) about to wait for the following futures []
+2024-06-24 19:12:17,630 - DEBUG - IOWriteTask(transfer_id=0, {'offset': 0}) done waiting for dependent futures
+2024-06-24 19:12:17,630 - DEBUG - Executing task IOWriteTask(transfer_id=0, {'offset': 0}) with kwargs {'fileobj': <s3transfer.utils.DeferredOpenFile object at 0x000002659F3DE390>, 'offset': 0}
+2024-06-24 19:12:17,631 - DEBUG - IORenameFileTask(transfer_id=0, {'final_filename': 'C:\\Users\\hp\\Documents\\data_engineering\\spark_data\\file_from_s3\\movie_review1.csv'}) about to wait for the following futures []
+2024-06-24 19:12:17,631 - DEBUG - IORenameFileTask(transfer_id=0, {'final_filename': 'C:\\Users\\hp\\Documents\\data_engineering\\spark_data\\file_from_s3\\movie_review1.csv'}) done waiting for dependent futures
+2024-06-24 19:12:17,631 - DEBUG - Executing task IORenameFileTask(transfer_id=0, {'final_filename': 'C:\\Users\\hp\\Documents\\data_engineering\\spark_data\\file_from_s3\\movie_review1.csv'}) with kwargs {'fileobj': <s3transfer.utils.DeferredOpenFile object at 0x000002659F3DE390>, 'final_filename': 'C:\\Users\\hp\\Documents\\data_engineering\\spark_data\\file_from_s3\\movie_review1.csv', 'osutil': <s3transfer.utils.OSUtils object at 0x000002659E038F50>}
+2024-06-24 19:12:17,633 - DEBUG - Releasing acquire 0/None
+2024-06-24 19:12:17,633 - INFO - File name newstd.csv 
+2024-06-24 19:12:17,633 - DEBUG - Opting out of CRT Transfer Manager. Preferred client: auto, CRT available: False, Instance Optimized: False.
+2024-06-24 19:12:17,633 - DEBUG - Using default client. pid: 18236, thread: 15628
+2024-06-24 19:12:17,634 - DEBUG - Acquiring 0
+2024-06-24 19:12:17,634 - DEBUG - DownloadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x000002659F37D410>}) about to wait for the following futures []
+2024-06-24 19:12:17,634 - DEBUG - DownloadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x000002659F37D410>}) done waiting for dependent futures
+2024-06-24 19:12:17,634 - DEBUG - Executing task DownloadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x000002659F37D410>}) with kwargs {'client': <botocore.client.S3 object at 0x000002659C32B010>, 'config': <boto3.s3.transfer.TransferConfig object at 0x000002659C113810>, 'osutil': <s3transfer.utils.OSUtils object at 0x000002659DB9AED0>, 'request_executor': <s3transfer.futures.BoundedExecutor object at 0x000002659F3CB350>, 'transfer_future': <s3transfer.futures.TransferFuture object at 0x000002659F37D410>, 'io_executor': <s3transfer.futures.BoundedExecutor object at 0x000002659F3B1450>}
+2024-06-24 19:12:17,634 - DEBUG - Event before-parameter-build.s3.HeadObject: calling handler <function sse_md5 at 0x000002659C595260>
+2024-06-24 19:12:17,634 - DEBUG - Event before-parameter-build.s3.HeadObject: calling handler <function validate_bucket_name at 0x000002659C5951C0>
+2024-06-24 19:12:17,634 - DEBUG - Event before-parameter-build.s3.HeadObject: calling handler <function remove_bucket_from_url_paths_from_model at 0x000002659C597380>
+2024-06-24 19:12:17,635 - DEBUG - Event before-parameter-build.s3.HeadObject: calling handler <bound method S3RegionRedirectorv2.annotate_request_context of <botocore.utils.S3RegionRedirectorv2 object at 0x000002659E0331D0>>
+2024-06-24 19:12:17,635 - DEBUG - Event before-parameter-build.s3.HeadObject: calling handler <bound method ClientCreator._inject_s3_input_parameters of <botocore.client.ClientCreator object at 0x000002659DAC6890>>
+2024-06-24 19:12:17,635 - DEBUG - Event before-parameter-build.s3.HeadObject: calling handler <function generate_idempotent_uuid at 0x000002659C594FE0>
+2024-06-24 19:12:17,635 - DEBUG - Event before-endpoint-resolution.s3: calling handler <function customize_endpoint_resolver_builtins at 0x000002659C597560>
+2024-06-24 19:12:17,635 - DEBUG - Event before-endpoint-resolution.s3: calling handler <bound method S3RegionRedirectorv2.redirect_from_cache of <botocore.utils.S3RegionRedirectorv2 object at 0x000002659E0331D0>>
+2024-06-24 19:12:17,635 - DEBUG - Calling endpoint provider with parameters: {'Bucket': 'youtube-project-testing-vaibhav', 'Region': 'ap-south-1', 'UseFIPS': False, 'UseDualStack': False, 'ForcePathStyle': False, 'Accelerate': False, 'UseGlobalEndpoint': True, 'Key': 'sales_data/newstd.csv', 'DisableMultiRegionAccessPoints': False, 'UseArnRegion': True}
+2024-06-24 19:12:17,635 - DEBUG - Endpoint provider result: https://youtube-project-testing-vaibhav.s3.ap-south-1.amazonaws.com
+2024-06-24 19:12:17,635 - DEBUG - Selecting from endpoint provider's list of auth schemes: "sigv4". User selected auth scheme is: "None"
+2024-06-24 19:12:17,635 - DEBUG - Selected auth type "v4" as "v4" with signing context params: {'region': 'ap-south-1', 'signing_name': 's3', 'disableDoubleEncoding': True}
+2024-06-24 19:12:17,636 - DEBUG - Event before-call.s3.HeadObject: calling handler <function add_expect_header at 0x000002659C595580>
+2024-06-24 19:12:17,636 - DEBUG - Event before-call.s3.HeadObject: calling handler <bound method S3ExpressIdentityResolver.apply_signing_cache_key of <botocore.utils.S3ExpressIdentityResolver object at 0x000002659DBB8D10>>
+2024-06-24 19:12:17,636 - DEBUG - Event before-call.s3.HeadObject: calling handler <function add_recursion_detection_header at 0x000002659C567920>
+2024-06-24 19:12:17,636 - DEBUG - Event before-call.s3.HeadObject: calling handler <function inject_api_version_header_if_needed at 0x000002659C596AC0>
+2024-06-24 19:12:17,636 - DEBUG - Making request for OperationModel(name=HeadObject) with params: {'url_path': '/sales_data/newstd.csv', 'query_string': {}, 'method': 'HEAD', 'headers': {'User-Agent': 'Boto3/1.34.131 md/Botocore#1.34.131 ua/2.0 os/windows#10 md/arch#amd64 lang/python#3.11.6 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.34.131'}, 'body': b'', 'auth_path': '/youtube-project-testing-vaibhav/sales_data/newstd.csv', 'url': 'https://youtube-project-testing-vaibhav.s3.ap-south-1.amazonaws.com/sales_data/newstd.csv', 'context': {'client_region': 'us-east-1', 'client_config': <botocore.config.Config object at 0x000002659E01B790>, 'has_streaming_input': False, 'auth_type': 'v4', 's3_redirect': {'redirected': False, 'bucket': 'youtube-project-testing-vaibhav', 'params': {'Bucket': 'youtube-project-testing-vaibhav', 'Key': 'sales_data/newstd.csv'}}, 'input_params': {'Bucket': 'youtube-project-testing-vaibhav', 'Key': 'sales_data/newstd.csv'}, 'signing': {'region': 'ap-south-1', 'signing_name': 's3', 'disableDoubleEncoding': True}, 'endpoint_properties': {'authSchemes': [{'disableDoubleEncoding': True, 'name': 'sigv4', 'signingName': 's3', 'signingRegion': 'ap-south-1'}]}}}
+2024-06-24 19:12:17,636 - DEBUG - Event request-created.s3.HeadObject: calling handler <function signal_not_transferring at 0x000002659DF965C0>
+2024-06-24 19:12:17,636 - DEBUG - Event request-created.s3.HeadObject: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x000002659E01B750>>
+2024-06-24 19:12:17,636 - DEBUG - Event choose-signer.s3.HeadObject: calling handler <bound method ClientCreator._default_s3_presign_to_sigv2 of <botocore.client.ClientCreator object at 0x000002659DAC6890>>
+2024-06-24 19:12:17,636 - DEBUG - Event choose-signer.s3.HeadObject: calling handler <function set_operation_specific_signer at 0x000002659C594EA0>
+2024-06-24 19:12:17,636 - DEBUG - Event before-sign.s3.HeadObject: calling handler <function remove_arn_from_signing_path at 0x000002659C5974C0>
+2024-06-24 19:12:17,636 - DEBUG - Event before-sign.s3.HeadObject: calling handler <bound method S3ExpressIdentityResolver.resolve_s3express_identity of <botocore.utils.S3ExpressIdentityResolver object at 0x000002659DBB8D10>>
+2024-06-24 19:12:17,636 - DEBUG - Calculating signature using v4 auth.
+2024-06-24 19:12:17,636 - DEBUG - CanonicalRequest:
+HEAD
+/sales_data/newstd.csv
+
+host:youtube-project-testing-vaibhav.s3.ap-south-1.amazonaws.com
+x-amz-content-sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+x-amz-date:20240624T134217Z
+
+host;x-amz-content-sha256;x-amz-date
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+2024-06-24 19:12:17,636 - DEBUG - StringToSign:
+AWS4-HMAC-SHA256
+20240624T134217Z
+20240624/ap-south-1/s3/aws4_request
+2a05406e857e6e28970951297268003d155bdf333edb3fc6b3b5d5bfeab876d3
+2024-06-24 19:12:17,636 - DEBUG - Signature:
+bc6fc36b221f55b19993f6f99e1b4fabf06b147e097e135bde21960d2d23c48e
+2024-06-24 19:12:17,636 - DEBUG - Event request-created.s3.HeadObject: calling handler <function signal_transferring at 0x000002659DF96660>
+2024-06-24 19:12:17,637 - DEBUG - Event request-created.s3.HeadObject: calling handler <function add_retry_headers at 0x000002659C5972E0>
+2024-06-24 19:12:17,637 - DEBUG - Sending http request: <AWSPreparedRequest stream_output=False, method=HEAD, url=https://youtube-project-testing-vaibhav.s3.ap-south-1.amazonaws.com/sales_data/newstd.csv, headers={'User-Agent': b'Boto3/1.34.131 md/Botocore#1.34.131 ua/2.0 os/windows#10 md/arch#amd64 lang/python#3.11.6 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.34.131', 'X-Amz-Date': b'20240624T134217Z', 'X-Amz-Content-SHA256': b'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIA2UC3A4V7JS25LG77/20240624/ap-south-1/s3/aws4_request, SignedHeaders=host;x-amz-content-sha256;x-amz-date, Signature=bc6fc36b221f55b19993f6f99e1b4fabf06b147e097e135bde21960d2d23c48e', 'amz-sdk-invocation-id': b'4796a96f-94fb-4e5e-95d9-067fe97cde11', 'amz-sdk-request': b'attempt=1'}>
+2024-06-24 19:12:17,637 - DEBUG - Certificate path: C:\Users\hp\PycharmProjects\youtube_ideas\youtube_de_project1\vaibhav-venv\Lib\site-packages\botocore\cacert.pem
+2024-06-24 19:12:17,664 - DEBUG - https://youtube-project-testing-vaibhav.s3.ap-south-1.amazonaws.com:443 "HEAD /sales_data/newstd.csv HTTP/11" 200 0
+2024-06-24 19:12:17,664 - DEBUG - Response headers: {'x-amz-id-2': 'el09KxzApBZ5xGZN4ql1WnjsbY3PydGh92gI+U/MH6sCl3bul+j8TYBWBPN60abUZiKpiKSw78kVKzRBCSX4sA==', 'x-amz-request-id': 'SG3Z9Y791G5ZQZC0', 'Date': 'Mon, 24 Jun 2024 13:42:19 GMT', 'Last-Modified': 'Mon, 24 Jun 2024 12:33:29 GMT', 'ETag': '"5b2054a51fbe07764697add8d1a2fb00"', 'x-amz-server-side-encryption': 'AES256', 'Accept-Ranges': 'bytes', 'Content-Type': 'binary/octet-stream', 'Server': 'AmazonS3', 'Content-Length': '76'}
+2024-06-24 19:12:17,664 - DEBUG - Response body:
+b''
+2024-06-24 19:12:17,665 - DEBUG - Event needs-retry.s3.HeadObject: calling handler <botocore.retryhandler.RetryHandler object at 0x000002659C0E5050>
+2024-06-24 19:12:17,665 - DEBUG - No retry needed.
+2024-06-24 19:12:17,665 - DEBUG - Event needs-retry.s3.HeadObject: calling handler <bound method S3RegionRedirectorv2.redirect_from_error of <botocore.utils.S3RegionRedirectorv2 object at 0x000002659E0331D0>>
+2024-06-24 19:12:17,666 - DEBUG - Submitting task ImmediatelyWriteIOGetObjectTask(transfer_id=0, {'bucket': 'youtube-project-testing-vaibhav', 'key': 'sales_data/newstd.csv', 'extra_args': {}}) to executor <s3transfer.futures.BoundedExecutor object at 0x000002659F3CB350> for transfer request: 0.
+2024-06-24 19:12:17,666 - DEBUG - Acquiring 0
+2024-06-24 19:12:17,667 - DEBUG - ImmediatelyWriteIOGetObjectTask(transfer_id=0, {'bucket': 'youtube-project-testing-vaibhav', 'key': 'sales_data/newstd.csv', 'extra_args': {}}) about to wait for the following futures []
+2024-06-24 19:12:17,667 - DEBUG - ImmediatelyWriteIOGetObjectTask(transfer_id=0, {'bucket': 'youtube-project-testing-vaibhav', 'key': 'sales_data/newstd.csv', 'extra_args': {}}) done waiting for dependent futures
+2024-06-24 19:12:17,667 - DEBUG - Executing task ImmediatelyWriteIOGetObjectTask(transfer_id=0, {'bucket': 'youtube-project-testing-vaibhav', 'key': 'sales_data/newstd.csv', 'extra_args': {}}) with kwargs {'client': <botocore.client.S3 object at 0x000002659C32B010>, 'bucket': 'youtube-project-testing-vaibhav', 'key': 'sales_data/newstd.csv', 'fileobj': <s3transfer.utils.DeferredOpenFile object at 0x000002659F3B17D0>, 'extra_args': {}, 'callbacks': [], 'max_attempts': 5, 'download_output_manager': <s3transfer.download.DownloadFilenameOutputManager object at 0x000002659F3CAED0>, 'io_chunksize': 262144, 'bandwidth_limiter': None}
+2024-06-24 19:12:17,667 - DEBUG - Event before-parameter-build.s3.GetObject: calling handler <function sse_md5 at 0x000002659C595260>
+2024-06-24 19:12:17,667 - DEBUG - Event before-parameter-build.s3.GetObject: calling handler <function validate_bucket_name at 0x000002659C5951C0>
+2024-06-24 19:12:17,667 - DEBUG - Event before-parameter-build.s3.GetObject: calling handler <function remove_bucket_from_url_paths_from_model at 0x000002659C597380>
+2024-06-24 19:12:17,668 - DEBUG - Releasing acquire 0/None
+2024-06-24 19:12:17,668 - DEBUG - Event before-parameter-build.s3.GetObject: calling handler <bound method S3RegionRedirectorv2.annotate_request_context of <botocore.utils.S3RegionRedirectorv2 object at 0x000002659E0331D0>>
+2024-06-24 19:12:17,668 - DEBUG - Event before-parameter-build.s3.GetObject: calling handler <bound method ClientCreator._inject_s3_input_parameters of <botocore.client.ClientCreator object at 0x000002659DAC6890>>
+2024-06-24 19:12:17,668 - DEBUG - Event before-parameter-build.s3.GetObject: calling handler <function generate_idempotent_uuid at 0x000002659C594FE0>
+2024-06-24 19:12:17,668 - DEBUG - Event before-endpoint-resolution.s3: calling handler <function customize_endpoint_resolver_builtins at 0x000002659C597560>
+2024-06-24 19:12:17,668 - DEBUG - Event before-endpoint-resolution.s3: calling handler <bound method S3RegionRedirectorv2.redirect_from_cache of <botocore.utils.S3RegionRedirectorv2 object at 0x000002659E0331D0>>
+2024-06-24 19:12:17,669 - DEBUG - Calling endpoint provider with parameters: {'Bucket': 'youtube-project-testing-vaibhav', 'Region': 'ap-south-1', 'UseFIPS': False, 'UseDualStack': False, 'ForcePathStyle': False, 'Accelerate': False, 'UseGlobalEndpoint': True, 'Key': 'sales_data/newstd.csv', 'DisableMultiRegionAccessPoints': False, 'UseArnRegion': True}
+2024-06-24 19:12:17,669 - DEBUG - Endpoint provider result: https://youtube-project-testing-vaibhav.s3.ap-south-1.amazonaws.com
+2024-06-24 19:12:17,669 - DEBUG - Selecting from endpoint provider's list of auth schemes: "sigv4". User selected auth scheme is: "None"
+2024-06-24 19:12:17,669 - DEBUG - Selected auth type "v4" as "v4" with signing context params: {'region': 'ap-south-1', 'signing_name': 's3', 'disableDoubleEncoding': True}
+2024-06-24 19:12:17,669 - DEBUG - Event before-call.s3.GetObject: calling handler <function add_expect_header at 0x000002659C595580>
+2024-06-24 19:12:17,669 - DEBUG - Event before-call.s3.GetObject: calling handler <bound method S3ExpressIdentityResolver.apply_signing_cache_key of <botocore.utils.S3ExpressIdentityResolver object at 0x000002659DBB8D10>>
+2024-06-24 19:12:17,669 - DEBUG - Event before-call.s3.GetObject: calling handler <function add_recursion_detection_header at 0x000002659C567920>
+2024-06-24 19:12:17,669 - DEBUG - Event before-call.s3.GetObject: calling handler <function inject_api_version_header_if_needed at 0x000002659C596AC0>
+2024-06-24 19:12:17,669 - DEBUG - Making request for OperationModel(name=GetObject) with params: {'url_path': '/sales_data/newstd.csv', 'query_string': {}, 'method': 'GET', 'headers': {'User-Agent': 'Boto3/1.34.131 md/Botocore#1.34.131 ua/2.0 os/windows#10 md/arch#amd64 lang/python#3.11.6 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.34.131'}, 'body': b'', 'auth_path': '/youtube-project-testing-vaibhav/sales_data/newstd.csv', 'url': 'https://youtube-project-testing-vaibhav.s3.ap-south-1.amazonaws.com/sales_data/newstd.csv', 'context': {'client_region': 'us-east-1', 'client_config': <botocore.config.Config object at 0x000002659E01B790>, 'has_streaming_input': False, 'auth_type': 'v4', 's3_redirect': {'redirected': False, 'bucket': 'youtube-project-testing-vaibhav', 'params': {'Bucket': 'youtube-project-testing-vaibhav', 'Key': 'sales_data/newstd.csv'}}, 'input_params': {'Bucket': 'youtube-project-testing-vaibhav', 'Key': 'sales_data/newstd.csv'}, 'signing': {'region': 'ap-south-1', 'signing_name': 's3', 'disableDoubleEncoding': True}, 'endpoint_properties': {'authSchemes': [{'disableDoubleEncoding': True, 'name': 'sigv4', 'signingName': 's3', 'signingRegion': 'ap-south-1'}]}}}
+2024-06-24 19:12:17,670 - DEBUG - Event request-created.s3.GetObject: calling handler <function signal_not_transferring at 0x000002659DF965C0>
+2024-06-24 19:12:17,670 - DEBUG - Event request-created.s3.GetObject: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x000002659E01B750>>
+2024-06-24 19:12:17,670 - DEBUG - Event choose-signer.s3.GetObject: calling handler <bound method ClientCreator._default_s3_presign_to_sigv2 of <botocore.client.ClientCreator object at 0x000002659DAC6890>>
+2024-06-24 19:12:17,670 - DEBUG - Event choose-signer.s3.GetObject: calling handler <function set_operation_specific_signer at 0x000002659C594EA0>
+2024-06-24 19:12:17,670 - DEBUG - Event before-sign.s3.GetObject: calling handler <function remove_arn_from_signing_path at 0x000002659C5974C0>
+2024-06-24 19:12:17,670 - DEBUG - Event before-sign.s3.GetObject: calling handler <bound method S3ExpressIdentityResolver.resolve_s3express_identity of <botocore.utils.S3ExpressIdentityResolver object at 0x000002659DBB8D10>>
+2024-06-24 19:12:17,670 - DEBUG - Calculating signature using v4 auth.
+2024-06-24 19:12:17,670 - DEBUG - CanonicalRequest:
+GET
+/sales_data/newstd.csv
+
+host:youtube-project-testing-vaibhav.s3.ap-south-1.amazonaws.com
+x-amz-content-sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+x-amz-date:20240624T134217Z
+
+host;x-amz-content-sha256;x-amz-date
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+2024-06-24 19:12:17,670 - DEBUG - StringToSign:
+AWS4-HMAC-SHA256
+20240624T134217Z
+20240624/ap-south-1/s3/aws4_request
+2c3f92a1d047f3e54055391cfa36d21e24ed2bd1504beb729a70d1816ced05f4
+2024-06-24 19:12:17,670 - DEBUG - Signature:
+0f3e6b0ef988703915bf6c9f1e1aa459579e8424d5b012363a8170e17b4d4e39
+2024-06-24 19:12:17,670 - DEBUG - Event request-created.s3.GetObject: calling handler <function signal_transferring at 0x000002659DF96660>
+2024-06-24 19:12:17,670 - DEBUG - Event request-created.s3.GetObject: calling handler <function add_retry_headers at 0x000002659C5972E0>
+2024-06-24 19:12:17,670 - DEBUG - Sending http request: <AWSPreparedRequest stream_output=True, method=GET, url=https://youtube-project-testing-vaibhav.s3.ap-south-1.amazonaws.com/sales_data/newstd.csv, headers={'User-Agent': b'Boto3/1.34.131 md/Botocore#1.34.131 ua/2.0 os/windows#10 md/arch#amd64 lang/python#3.11.6 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.34.131', 'X-Amz-Date': b'20240624T134217Z', 'X-Amz-Content-SHA256': b'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIA2UC3A4V7JS25LG77/20240624/ap-south-1/s3/aws4_request, SignedHeaders=host;x-amz-content-sha256;x-amz-date, Signature=0f3e6b0ef988703915bf6c9f1e1aa459579e8424d5b012363a8170e17b4d4e39', 'amz-sdk-invocation-id': b'9a21a91f-d766-4e92-a5cb-c48b867cfdd2', 'amz-sdk-request': b'attempt=1'}>
+2024-06-24 19:12:17,671 - DEBUG - Certificate path: C:\Users\hp\PycharmProjects\youtube_ideas\youtube_de_project1\vaibhav-venv\Lib\site-packages\botocore\cacert.pem
+2024-06-24 19:12:17,709 - DEBUG - https://youtube-project-testing-vaibhav.s3.ap-south-1.amazonaws.com:443 "GET /sales_data/newstd.csv HTTP/11" 200 76
+2024-06-24 19:12:17,709 - DEBUG - Response headers: {'x-amz-id-2': '1t6bUgmB2nk/2IK8f4zgi9pna+qM0YFbmW97ztRruyWwfM1Lj2YOpY6YfsfQ6r27/cju/rcdJI/F2nb5Jr3dMA==', 'x-amz-request-id': 'SG3V6MZ9SR3S3HXX', 'Date': 'Mon, 24 Jun 2024 13:42:19 GMT', 'Last-Modified': 'Mon, 24 Jun 2024 12:33:29 GMT', 'ETag': '"5b2054a51fbe07764697add8d1a2fb00"', 'x-amz-server-side-encryption': 'AES256', 'Accept-Ranges': 'bytes', 'Content-Type': 'binary/octet-stream', 'Server': 'AmazonS3', 'Content-Length': '76'}
+2024-06-24 19:12:17,709 - DEBUG - Response body:
+<botocore.response.StreamingBody object at 0x000002659E003E20>
+2024-06-24 19:12:17,709 - DEBUG - Event needs-retry.s3.GetObject: calling handler <botocore.retryhandler.RetryHandler object at 0x000002659C0E5050>
+2024-06-24 19:12:17,710 - DEBUG - No retry needed.
+2024-06-24 19:12:17,710 - DEBUG - Event needs-retry.s3.GetObject: calling handler <bound method S3RegionRedirectorv2.redirect_from_error of <botocore.utils.S3RegionRedirectorv2 object at 0x000002659E0331D0>>
+2024-06-24 19:12:17,710 - DEBUG - IOWriteTask(transfer_id=0, {'offset': 0}) about to wait for the following futures []
+2024-06-24 19:12:17,710 - DEBUG - IOWriteTask(transfer_id=0, {'offset': 0}) done waiting for dependent futures
+2024-06-24 19:12:17,710 - DEBUG - Executing task IOWriteTask(transfer_id=0, {'offset': 0}) with kwargs {'fileobj': <s3transfer.utils.DeferredOpenFile object at 0x000002659F3B17D0>, 'offset': 0}
+2024-06-24 19:12:17,712 - DEBUG - IORenameFileTask(transfer_id=0, {'final_filename': 'C:\\Users\\hp\\Documents\\data_engineering\\spark_data\\file_from_s3\\newstd.csv'}) about to wait for the following futures []
+2024-06-24 19:12:17,712 - DEBUG - IORenameFileTask(transfer_id=0, {'final_filename': 'C:\\Users\\hp\\Documents\\data_engineering\\spark_data\\file_from_s3\\newstd.csv'}) done waiting for dependent futures
+2024-06-24 19:12:17,712 - DEBUG - Executing task IORenameFileTask(transfer_id=0, {'final_filename': 'C:\\Users\\hp\\Documents\\data_engineering\\spark_data\\file_from_s3\\newstd.csv'}) with kwargs {'fileobj': <s3transfer.utils.DeferredOpenFile object at 0x000002659F3B17D0>, 'final_filename': 'C:\\Users\\hp\\Documents\\data_engineering\\spark_data\\file_from_s3\\newstd.csv', 'osutil': <s3transfer.utils.OSUtils object at 0x000002659DB9AED0>}
+2024-06-24 19:12:17,713 - DEBUG - Releasing acquire 0/None
+2024-06-24 19:12:17,714 - INFO - List of files present at my local directory after download ['india_companies.csv', 'movie_review1.csv', 'Multi_line_correct.json', 'Multi_line_incorrect.json', 'newstd.csv']
+2024-06-24 19:12:17,714 - INFO - ************** Listing the File ***********************
+2024-06-24 19:12:17,714 - INFO - List of csv files that needs to be processed ['C:\\Users\\hp\\Documents\\data_engineering\\spark_data\\file_from_s3\\india_companies.csv', 'C:\\Users\\hp\\Documents\\data_engineering\\spark_data\\file_from_s3\\movie_review1.csv', 'C:\\Users\\hp\\Documents\\data_engineering\\spark_data\\file_from_s3\\newstd.csv']
+2024-06-24 19:12:17,714 - INFO - *************** Creating Spark Session ********************
+2024-06-24 19:12:19,539 - DEBUG - GatewayClient.address is deprecated and will be removed in version 1.0. Use GatewayParameters instead.
+2024-06-24 19:12:19,539 - DEBUG - Command to send: A
+5633be50f6632eeb0184e01c2bfd4abe728948201a1855c142a64a3a241e8ab7
+
+2024-06-24 19:12:19,549 - DEBUG - Answer received: !yv
+2024-06-24 19:12:19,549 - DEBUG - Command to send: j
+i
+rj
+org.apache.spark.SparkConf
+e
+
+2024-06-24 19:12:19,551 - DEBUG - Answer received: !yv
+2024-06-24 19:12:19,551 - DEBUG - Command to send: j
+i
+rj
+org.apache.spark.api.java.*
+e
+
+2024-06-24 19:12:19,552 - DEBUG - Answer received: !yv
+2024-06-24 19:12:19,552 - DEBUG - Command to send: j
+i
+rj
+org.apache.spark.api.python.*
+e
+
+2024-06-24 19:12:19,552 - DEBUG - Answer received: !yv
+2024-06-24 19:12:19,552 - DEBUG - Command to send: j
+i
+rj
+org.apache.spark.ml.python.*
+e
+
+2024-06-24 19:12:19,552 - DEBUG - Answer received: !yv
+2024-06-24 19:12:19,552 - DEBUG - Command to send: j
+i
+rj
+org.apache.spark.mllib.api.python.*
+e
+
+2024-06-24 19:12:19,552 - DEBUG - Answer received: !yv
+2024-06-24 19:12:19,553 - DEBUG - Command to send: j
+i
+rj
+org.apache.spark.resource.*
+e
+
+2024-06-24 19:12:19,553 - DEBUG - Answer received: !yv
+2024-06-24 19:12:19,553 - DEBUG - Command to send: j
+i
+rj
+org.apache.spark.sql.*
+e
+
+2024-06-24 19:12:19,553 - DEBUG - Answer received: !yv
+2024-06-24 19:12:19,553 - DEBUG - Command to send: j
+i
+rj
+org.apache.spark.sql.api.python.*
+e
+
+2024-06-24 19:12:19,553 - DEBUG - Answer received: !yv
+2024-06-24 19:12:19,553 - DEBUG - Command to send: j
+i
+rj
+org.apache.spark.sql.hive.*
+e
+
+2024-06-24 19:12:19,554 - DEBUG - Answer received: !yv
+2024-06-24 19:12:19,554 - DEBUG - Command to send: j
+i
+rj
+scala.Tuple2
+e
+
+2024-06-24 19:12:19,554 - DEBUG - Answer received: !yv
+2024-06-24 19:12:19,554 - DEBUG - Command to send: r
+u
+SparkConf
+rj
+e
+
+2024-06-24 19:12:19,556 - DEBUG - Answer received: !ycorg.apache.spark.SparkConf
+2024-06-24 19:12:19,556 - DEBUG - Command to send: i
+org.apache.spark.SparkConf
+bTrue
+e
+
+2024-06-24 19:12:19,562 - DEBUG - Answer received: !yro0
+2024-06-24 19:12:19,563 - DEBUG - Command to send: c
+o0
+set
+sspark.master
+slocal[*]
+e
+
+2024-06-24 19:12:19,566 - DEBUG - Answer received: !yro1
+2024-06-24 19:12:19,566 - DEBUG - Command to send: c
+o0
+set
+sspark.app.name
+svaibhav_spark2
+e
+
+2024-06-24 19:12:19,567 - DEBUG - Answer received: !yro2
+2024-06-24 19:12:19,567 - DEBUG - Command to send: c
+o0
+set
+sspark.driver.extraClassPath
+sC:\\my_sql_jar\\mysql-connector-java-8.0.26.jar
+e
+
+2024-06-24 19:12:19,567 - DEBUG - Answer received: !yro3
+2024-06-24 19:12:19,567 - DEBUG - Command to send: c
+o0
+contains
+sspark.serializer.objectStreamReset
+e
+
+2024-06-24 19:12:19,567 - DEBUG - Answer received: !ybfalse
+2024-06-24 19:12:19,567 - DEBUG - Command to send: c
+o0
+set
+sspark.serializer.objectStreamReset
+s100
+e
+
+2024-06-24 19:12:19,568 - DEBUG - Answer received: !yro4
+2024-06-24 19:12:19,568 - DEBUG - Command to send: c
+o0
+contains
+sspark.rdd.compress
+e
+
+2024-06-24 19:12:19,568 - DEBUG - Answer received: !ybfalse
+2024-06-24 19:12:19,568 - DEBUG - Command to send: c
+o0
+set
+sspark.rdd.compress
+sTrue
+e
+
+2024-06-24 19:12:19,568 - DEBUG - Answer received: !yro5
+2024-06-24 19:12:19,568 - DEBUG - Command to send: c
+o0
+contains
+sspark.master
+e
+
+2024-06-24 19:12:19,568 - DEBUG - Answer received: !ybtrue
+2024-06-24 19:12:19,569 - DEBUG - Command to send: c
+o0
+contains
+sspark.app.name
+e
+
+2024-06-24 19:12:19,569 - DEBUG - Answer received: !ybtrue
+2024-06-24 19:12:19,569 - DEBUG - Command to send: c
+o0
+contains
+sspark.master
+e
+
+2024-06-24 19:12:19,569 - DEBUG - Answer received: !ybtrue
+2024-06-24 19:12:19,569 - DEBUG - Command to send: c
+o0
+get
+sspark.master
+e
+
+2024-06-24 19:12:19,570 - DEBUG - Answer received: !yslocal[*]
+2024-06-24 19:12:19,570 - DEBUG - Command to send: c
+o0
+contains
+sspark.app.name
+e
+
+2024-06-24 19:12:19,571 - DEBUG - Answer received: !ybtrue
+2024-06-24 19:12:19,571 - DEBUG - Command to send: c
+o0
+get
+sspark.app.name
+e
+
+2024-06-24 19:12:19,571 - DEBUG - Answer received: !ysvaibhav_spark2
+2024-06-24 19:12:19,571 - DEBUG - Command to send: c
+o0
+contains
+sspark.home
+e
+
+2024-06-24 19:12:19,571 - DEBUG - Answer received: !ybfalse
+2024-06-24 19:12:19,571 - DEBUG - Command to send: c
+o0
+getAll
+e
+
+2024-06-24 19:12:19,572 - DEBUG - Answer received: !yto6
+2024-06-24 19:12:19,572 - DEBUG - Command to send: a
+e
+o6
+e
+
+2024-06-24 19:12:19,572 - DEBUG - Answer received: !yi9
+2024-06-24 19:12:19,572 - DEBUG - Command to send: a
+g
+o6
+i0
+e
+
+2024-06-24 19:12:19,572 - DEBUG - Answer received: !yro7
+2024-06-24 19:12:19,573 - DEBUG - Command to send: c
+o7
+_1
+e
+
+2024-06-24 19:12:19,573 - DEBUG - Answer received: !ysspark.driver.extraClassPath
+2024-06-24 19:12:19,573 - DEBUG - Command to send: c
+o7
+_2
+e
+
+2024-06-24 19:12:19,573 - DEBUG - Answer received: !ysC:\\my_sql_jar\\mysql-connector-java-8.0.26.jar
+2024-06-24 19:12:19,573 - DEBUG - Command to send: a
+e
+o6
+e
+
+2024-06-24 19:12:19,574 - DEBUG - Answer received: !yi9
+2024-06-24 19:12:19,574 - DEBUG - Command to send: a
+g
+o6
+i1
+e
+
+2024-06-24 19:12:19,574 - DEBUG - Answer received: !yro8
+2024-06-24 19:12:19,574 - DEBUG - Command to send: c
+o8
+_1
+e
+
+2024-06-24 19:12:19,574 - DEBUG - Answer received: !ysspark.rdd.compress
+2024-06-24 19:12:19,574 - DEBUG - Command to send: c
+o8
+_2
+e
+
+2024-06-24 19:12:19,574 - DEBUG - Answer received: !ysTrue
+2024-06-24 19:12:19,574 - DEBUG - Command to send: a
+e
+o6
+e
+
+2024-06-24 19:12:19,575 - DEBUG - Answer received: !yi9
+2024-06-24 19:12:19,575 - DEBUG - Command to send: a
+g
+o6
+i2
+e
+
+2024-06-24 19:12:19,575 - DEBUG - Answer received: !yro9
+2024-06-24 19:12:19,575 - DEBUG - Command to send: c
+o9
+_1
+e
+
+2024-06-24 19:12:19,575 - DEBUG - Answer received: !ysspark.serializer.objectStreamReset
+2024-06-24 19:12:19,575 - DEBUG - Command to send: c
+o9
+_2
+e
+
+2024-06-24 19:12:19,575 - DEBUG - Answer received: !ys100
+2024-06-24 19:12:19,575 - DEBUG - Command to send: a
+e
+o6
+e
+
+2024-06-24 19:12:19,575 - DEBUG - Answer received: !yi9
+2024-06-24 19:12:19,576 - DEBUG - Command to send: a
+g
+o6
+i3
+e
+
+2024-06-24 19:12:19,576 - DEBUG - Answer received: !yro10
+2024-06-24 19:12:19,576 - DEBUG - Command to send: c
+o10
+_1
+e
+
+2024-06-24 19:12:19,576 - DEBUG - Answer received: !ysspark.master
+2024-06-24 19:12:19,576 - DEBUG - Command to send: c
+o10
+_2
+e
+
+2024-06-24 19:12:19,576 - DEBUG - Answer received: !yslocal[*]
+2024-06-24 19:12:19,576 - DEBUG - Command to send: a
+e
+o6
+e
+
+2024-06-24 19:12:19,576 - DEBUG - Answer received: !yi9
+2024-06-24 19:12:19,576 - DEBUG - Command to send: a
+g
+o6
+i4
+e
+
+2024-06-24 19:12:19,577 - DEBUG - Answer received: !yro11
+2024-06-24 19:12:19,577 - DEBUG - Command to send: c
+o11
+_1
+e
+
+2024-06-24 19:12:19,577 - DEBUG - Answer received: !ysspark.submit.pyFiles
+2024-06-24 19:12:19,577 - DEBUG - Command to send: c
+o11
+_2
+e
+
+2024-06-24 19:12:19,577 - DEBUG - Answer received: !ys
+2024-06-24 19:12:19,577 - DEBUG - Command to send: a
+e
+o6
+e
+
+2024-06-24 19:12:19,577 - DEBUG - Answer received: !yi9
+2024-06-24 19:12:19,577 - DEBUG - Command to send: a
+g
+o6
+i5
+e
+
+2024-06-24 19:12:19,577 - DEBUG - Answer received: !yro12
+2024-06-24 19:12:19,578 - DEBUG - Command to send: c
+o12
+_1
+e
+
+2024-06-24 19:12:19,578 - DEBUG - Answer received: !ysspark.submit.deployMode
+2024-06-24 19:12:19,578 - DEBUG - Command to send: c
+o12
+_2
+e
+
+2024-06-24 19:12:19,578 - DEBUG - Answer received: !ysclient
+2024-06-24 19:12:19,578 - DEBUG - Command to send: a
+e
+o6
+e
+
+2024-06-24 19:12:19,578 - DEBUG - Answer received: !yi9
+2024-06-24 19:12:19,578 - DEBUG - Command to send: a
+g
+o6
+i6
+e
+
+2024-06-24 19:12:19,579 - DEBUG - Answer received: !yro13
+2024-06-24 19:12:19,579 - DEBUG - Command to send: c
+o13
+_1
+e
+
+2024-06-24 19:12:19,579 - DEBUG - Answer received: !ysspark.app.name
+2024-06-24 19:12:19,579 - DEBUG - Command to send: c
+o13
+_2
+e
+
+2024-06-24 19:12:19,579 - DEBUG - Answer received: !ysvaibhav_spark2
+2024-06-24 19:12:19,579 - DEBUG - Command to send: a
+e
+o6
+e
+
+2024-06-24 19:12:19,579 - DEBUG - Answer received: !yi9
+2024-06-24 19:12:19,579 - DEBUG - Command to send: a
+g
+o6
+i7
+e
+
+2024-06-24 19:12:19,579 - DEBUG - Answer received: !yro14
+2024-06-24 19:12:19,579 - DEBUG - Command to send: c
+o14
+_1
+e
+
+2024-06-24 19:12:19,579 - DEBUG - Answer received: !ysspark.ui.showConsoleProgress
+2024-06-24 19:12:19,579 - DEBUG - Command to send: c
+o14
+_2
+e
+
+2024-06-24 19:12:19,580 - DEBUG - Answer received: !ystrue
+2024-06-24 19:12:19,580 - DEBUG - Command to send: a
+e
+o6
+e
+
+2024-06-24 19:12:19,580 - DEBUG - Answer received: !yi9
+2024-06-24 19:12:19,580 - DEBUG - Command to send: a
+g
+o6
+i8
+e
+
+2024-06-24 19:12:19,580 - DEBUG - Answer received: !yro15
+2024-06-24 19:12:19,580 - DEBUG - Command to send: c
+o15
+_1
+e
+
+2024-06-24 19:12:19,581 - DEBUG - Answer received: !ysspark.app.submitTime
+2024-06-24 19:12:19,581 - DEBUG - Command to send: c
+o15
+_2
+e
+
+2024-06-24 19:12:19,581 - DEBUG - Answer received: !ys1719236539383
+2024-06-24 19:12:19,581 - DEBUG - Command to send: a
+e
+o6
+e
+
+2024-06-24 19:12:19,581 - DEBUG - Answer received: !yi9
+2024-06-24 19:12:19,581 - DEBUG - Command to send: r
+u
+JavaSparkContext
+rj
+e
+
+2024-06-24 19:12:19,591 - DEBUG - Answer received: !ycorg.apache.spark.api.java.JavaSparkContext
+2024-06-24 19:12:19,592 - DEBUG - Command to send: i
+org.apache.spark.api.java.JavaSparkContext
+ro0
+e
+
+2024-06-24 19:12:20,539 - DEBUG - Command to send: A
+5633be50f6632eeb0184e01c2bfd4abe728948201a1855c142a64a3a241e8ab7
+
+2024-06-24 19:12:20,540 - DEBUG - Answer received: !yv
+2024-06-24 19:12:20,540 - DEBUG - Command to send: m
+d
+o1
+e
+
+2024-06-24 19:12:20,541 - DEBUG - Answer received: !yv
+2024-06-24 19:12:20,541 - DEBUG - Command to send: m
+d
+o2
+e
+
+2024-06-24 19:12:20,541 - DEBUG - Answer received: !yv
+2024-06-24 19:12:20,541 - DEBUG - Command to send: m
+d
+o3
+e
+
+2024-06-24 19:12:20,541 - DEBUG - Answer received: !yv
+2024-06-24 19:12:20,541 - DEBUG - Command to send: m
+d
+o4
+e
+
+2024-06-24 19:12:20,541 - DEBUG - Answer received: !yv
+2024-06-24 19:12:20,541 - DEBUG - Command to send: m
+d
+o5
+e
+
+2024-06-24 19:12:20,541 - DEBUG - Answer received: !yv
+2024-06-24 19:12:20,542 - DEBUG - Command to send: m
+d
+o6
+e
+
+2024-06-24 19:12:20,542 - DEBUG - Answer received: !yv
+2024-06-24 19:12:20,661 - DEBUG - Answer received: !yro16
+2024-06-24 19:12:20,661 - DEBUG - Command to send: c
+o16
+sc
+e
+
+2024-06-24 19:12:20,664 - DEBUG - Answer received: !yro17
+2024-06-24 19:12:20,664 - DEBUG - Command to send: c
+o17
+conf
+e
+
+2024-06-24 19:12:20,671 - DEBUG - Answer received: !yro18
+2024-06-24 19:12:20,671 - DEBUG - Command to send: r
+u
+PythonAccumulatorV2
+rj
+e
+
+2024-06-24 19:12:20,673 - DEBUG - Answer received: !ycorg.apache.spark.api.python.PythonAccumulatorV2
+2024-06-24 19:12:20,673 - DEBUG - Command to send: i
+org.apache.spark.api.python.PythonAccumulatorV2
+s127.0.0.1
+i52811
+s5633be50f6632eeb0184e01c2bfd4abe728948201a1855c142a64a3a241e8ab7
+e
+
+2024-06-24 19:12:20,673 - DEBUG - Answer received: !yro19
+2024-06-24 19:12:20,673 - DEBUG - Command to send: c
+o16
+sc
+e
+
+2024-06-24 19:12:20,673 - DEBUG - Answer received: !yro20
+2024-06-24 19:12:20,673 - DEBUG - Command to send: c
+o20
+register
+ro19
+e
+
+2024-06-24 19:12:20,676 - DEBUG - Answer received: !yv
+2024-06-24 19:12:20,676 - DEBUG - Command to send: r
+u
+PythonUtils
+rj
+e
+
+2024-06-24 19:12:20,677 - DEBUG - Answer received: !ycorg.apache.spark.api.python.PythonUtils
+2024-06-24 19:12:20,677 - DEBUG - Command to send: r
+m
+org.apache.spark.api.python.PythonUtils
+isEncryptionEnabled
+e
+
+2024-06-24 19:12:20,677 - DEBUG - Answer received: !ym
+2024-06-24 19:12:20,677 - DEBUG - Command to send: c
+z:org.apache.spark.api.python.PythonUtils
+isEncryptionEnabled
+ro16
+e
+
+2024-06-24 19:12:20,679 - DEBUG - Answer received: !ybfalse
+2024-06-24 19:12:20,679 - DEBUG - Command to send: r
+u
+PythonUtils
+rj
+e
+
+2024-06-24 19:12:20,679 - DEBUG - Answer received: !ycorg.apache.spark.api.python.PythonUtils
+2024-06-24 19:12:20,679 - DEBUG - Command to send: r
+m
+org.apache.spark.api.python.PythonUtils
+getPythonAuthSocketTimeout
+e
+
+2024-06-24 19:12:20,679 - DEBUG - Answer received: !ym
+2024-06-24 19:12:20,679 - DEBUG - Command to send: c
+z:org.apache.spark.api.python.PythonUtils
+getPythonAuthSocketTimeout
+ro16
+e
+
+2024-06-24 19:12:20,680 - DEBUG - Answer received: !yL15
+2024-06-24 19:12:20,680 - DEBUG - Command to send: r
+u
+PythonUtils
+rj
+e
+
+2024-06-24 19:12:20,680 - DEBUG - Answer received: !ycorg.apache.spark.api.python.PythonUtils
+2024-06-24 19:12:20,680 - DEBUG - Command to send: r
+m
+org.apache.spark.api.python.PythonUtils
+getSparkBufferSize
+e
+
+2024-06-24 19:12:20,680 - DEBUG - Answer received: !ym
+2024-06-24 19:12:20,680 - DEBUG - Command to send: c
+z:org.apache.spark.api.python.PythonUtils
+getSparkBufferSize
+ro16
+e
+
+2024-06-24 19:12:20,681 - DEBUG - Answer received: !yi65536
+2024-06-24 19:12:20,681 - DEBUG - Command to send: r
+u
+org
+rj
+e
+
+2024-06-24 19:12:20,682 - DEBUG - Answer received: !yp
+2024-06-24 19:12:20,682 - DEBUG - Command to send: r
+u
+org.apache
+rj
+e
+
+2024-06-24 19:12:20,682 - DEBUG - Answer received: !yp
+2024-06-24 19:12:20,682 - DEBUG - Command to send: r
+u
+org.apache.spark
+rj
+e
+
+2024-06-24 19:12:20,682 - DEBUG - Answer received: !yp
+2024-06-24 19:12:20,682 - DEBUG - Command to send: r
+u
+org.apache.spark.SparkFiles
+rj
+e
+
+2024-06-24 19:12:20,684 - DEBUG - Answer received: !ycorg.apache.spark.SparkFiles
+2024-06-24 19:12:20,684 - DEBUG - Command to send: r
+m
+org.apache.spark.SparkFiles
+getRootDirectory
+e
+
+2024-06-24 19:12:20,684 - DEBUG - Answer received: !ym
+2024-06-24 19:12:20,684 - DEBUG - Command to send: c
+z:org.apache.spark.SparkFiles
+getRootDirectory
+e
+
+2024-06-24 19:12:20,684 - DEBUG - Answer received: !ysC:\\Users\\hp\\AppData\\Local\\Temp\\spark-d4bd4498-d442-4d23-8326-1d1cd461dce3\\userFiles-4813fa66-1f5d-4ddb-a7ab-bebfff3d2b05
+2024-06-24 19:12:20,685 - DEBUG - Command to send: c
+o18
+get
+sspark.submit.pyFiles
+s
+e
+
+2024-06-24 19:12:20,685 - DEBUG - Answer received: !ys
+2024-06-24 19:12:20,685 - DEBUG - Command to send: r
+u
+org
+rj
+e
+
+2024-06-24 19:12:20,686 - DEBUG - Answer received: !yp
+2024-06-24 19:12:20,686 - DEBUG - Command to send: r
+u
+org.apache
+rj
+e
+
+2024-06-24 19:12:20,686 - DEBUG - Answer received: !yp
+2024-06-24 19:12:20,686 - DEBUG - Command to send: r
+u
+org.apache.spark
+rj
+e
+
+2024-06-24 19:12:20,686 - DEBUG - Answer received: !yp
+2024-06-24 19:12:20,686 - DEBUG - Command to send: r
+u
+org.apache.spark.util
+rj
+e
+
+2024-06-24 19:12:20,686 - DEBUG - Answer received: !yp
+2024-06-24 19:12:20,686 - DEBUG - Command to send: r
+u
+org.apache.spark.util.Utils
+rj
+e
+
+2024-06-24 19:12:20,689 - DEBUG - Answer received: !ycorg.apache.spark.util.Utils
+2024-06-24 19:12:20,689 - DEBUG - Command to send: r
+m
+org.apache.spark.util.Utils
+getLocalDir
+e
+
+2024-06-24 19:12:20,690 - DEBUG - Answer received: !ym
+2024-06-24 19:12:20,690 - DEBUG - Command to send: c
+o16
+sc
+e
+
+2024-06-24 19:12:20,690 - DEBUG - Answer received: !yro21
+2024-06-24 19:12:20,691 - DEBUG - Command to send: c
+o21
+conf
+e
+
+2024-06-24 19:12:20,691 - DEBUG - Answer received: !yro22
+2024-06-24 19:12:20,691 - DEBUG - Command to send: c
+z:org.apache.spark.util.Utils
+getLocalDir
+ro22
+e
+
+2024-06-24 19:12:20,691 - DEBUG - Answer received: !ysC:\\Users\\hp\\AppData\\Local\\Temp\\spark-d4bd4498-d442-4d23-8326-1d1cd461dce3
+2024-06-24 19:12:20,691 - DEBUG - Command to send: r
+u
+org
+rj
+e
+
+2024-06-24 19:12:20,692 - DEBUG - Answer received: !yp
+2024-06-24 19:12:20,692 - DEBUG - Command to send: r
+u
+org.apache
+rj
+e
+
+2024-06-24 19:12:20,693 - DEBUG - Answer received: !yp
+2024-06-24 19:12:20,693 - DEBUG - Command to send: r
+u
+org.apache.spark
+rj
+e
+
+2024-06-24 19:12:20,693 - DEBUG - Answer received: !yp
+2024-06-24 19:12:20,693 - DEBUG - Command to send: r
+u
+org.apache.spark.util
+rj
+e
+
+2024-06-24 19:12:20,693 - DEBUG - Answer received: !yp
+2024-06-24 19:12:20,693 - DEBUG - Command to send: r
+u
+org.apache.spark.util.Utils
+rj
+e
+
+2024-06-24 19:12:20,693 - DEBUG - Answer received: !ycorg.apache.spark.util.Utils
+2024-06-24 19:12:20,693 - DEBUG - Command to send: r
+m
+org.apache.spark.util.Utils
+createTempDir
+e
+
+2024-06-24 19:12:20,694 - DEBUG - Answer received: !ym
+2024-06-24 19:12:20,694 - DEBUG - Command to send: c
+z:org.apache.spark.util.Utils
+createTempDir
+sC:\\Users\\hp\\AppData\\Local\\Temp\\spark-d4bd4498-d442-4d23-8326-1d1cd461dce3
+spyspark
+e
+
+2024-06-24 19:12:20,697 - DEBUG - Answer received: !yro23
+2024-06-24 19:12:20,697 - DEBUG - Command to send: c
+o23
+getAbsolutePath
+e
+
+2024-06-24 19:12:20,697 - DEBUG - Answer received: !ysC:\\Users\\hp\\AppData\\Local\\Temp\\spark-d4bd4498-d442-4d23-8326-1d1cd461dce3\\pyspark-204068db-b495-40f8-aaa2-8b3f43167ee4
+2024-06-24 19:12:20,697 - DEBUG - Command to send: c
+o18
+get
+sspark.python.profile
+sfalse
+e
+
+2024-06-24 19:12:20,699 - DEBUG - Answer received: !ysfalse
+2024-06-24 19:12:20,699 - DEBUG - Command to send: c
+o18
+get
+sspark.python.profile.memory
+sfalse
+e
+
+2024-06-24 19:12:20,699 - DEBUG - Answer received: !ysfalse
+2024-06-24 19:12:20,699 - DEBUG - Command to send: r
+u
+SparkSession
+rj
+e
+
+2024-06-24 19:12:20,717 - DEBUG - Answer received: !ycorg.apache.spark.sql.SparkSession
+2024-06-24 19:12:20,717 - DEBUG - Command to send: r
+m
+org.apache.spark.sql.SparkSession
+getDefaultSession
+e
+
+2024-06-24 19:12:20,741 - DEBUG - Answer received: !ym
+2024-06-24 19:12:20,741 - DEBUG - Command to send: c
+z:org.apache.spark.sql.SparkSession
+getDefaultSession
+e
+
+2024-06-24 19:12:20,743 - DEBUG - Answer received: !yro24
+2024-06-24 19:12:20,743 - DEBUG - Command to send: c
+o24
+isDefined
+e
+
+2024-06-24 19:12:20,743 - DEBUG - Answer received: !ybfalse
+2024-06-24 19:12:20,743 - DEBUG - Command to send: r
+u
+SparkSession
+rj
+e
+
+2024-06-24 19:12:20,743 - DEBUG - Answer received: !ycorg.apache.spark.sql.SparkSession
+2024-06-24 19:12:20,743 - DEBUG - Command to send: c
+o16
+sc
+e
+
+2024-06-24 19:12:20,744 - DEBUG - Answer received: !yro25
+2024-06-24 19:12:20,744 - DEBUG - Command to send: i
+java.util.HashMap
+e
+
+2024-06-24 19:12:20,744 - DEBUG - Answer received: !yao26
+2024-06-24 19:12:20,744 - DEBUG - Command to send: c
+o26
+put
+sspark.master
+slocal[*]
+e
+
+2024-06-24 19:12:20,745 - DEBUG - Answer received: !yn
+2024-06-24 19:12:20,745 - DEBUG - Command to send: c
+o26
+put
+sspark.app.name
+svaibhav_spark2
+e
+
+2024-06-24 19:12:20,745 - DEBUG - Answer received: !yn
+2024-06-24 19:12:20,745 - DEBUG - Command to send: c
+o26
+put
+sspark.driver.extraClassPath
+sC:\\my_sql_jar\\mysql-connector-java-8.0.26.jar
+e
+
+2024-06-24 19:12:20,745 - DEBUG - Answer received: !yn
+2024-06-24 19:12:20,745 - DEBUG - Command to send: i
+org.apache.spark.sql.SparkSession
+ro25
+ro26
+e
+
+2024-06-24 19:12:20,799 - DEBUG - Answer received: !yro27
+2024-06-24 19:12:20,799 - DEBUG - Command to send: r
+u
+SparkSession
+rj
+e
+
+2024-06-24 19:12:20,800 - DEBUG - Answer received: !ycorg.apache.spark.sql.SparkSession
+2024-06-24 19:12:20,800 - DEBUG - Command to send: r
+m
+org.apache.spark.sql.SparkSession
+setDefaultSession
+e
+
+2024-06-24 19:12:20,801 - DEBUG - Answer received: !ym
+2024-06-24 19:12:20,801 - DEBUG - Command to send: c
+z:org.apache.spark.sql.SparkSession
+setDefaultSession
+ro27
+e
+
+2024-06-24 19:12:20,801 - DEBUG - Answer received: !yv
+2024-06-24 19:12:20,801 - DEBUG - Command to send: r
+u
+SparkSession
+rj
+e
+
+2024-06-24 19:12:20,802 - DEBUG - Answer received: !ycorg.apache.spark.sql.SparkSession
+2024-06-24 19:12:20,802 - DEBUG - Command to send: r
+m
+org.apache.spark.sql.SparkSession
+setActiveSession
+e
+
+2024-06-24 19:12:20,802 - DEBUG - Answer received: !ym
+2024-06-24 19:12:20,803 - DEBUG - Command to send: c
+z:org.apache.spark.sql.SparkSession
+setActiveSession
+ro27
+e
+
+2024-06-24 19:12:20,803 - DEBUG - Answer received: !yv
+2024-06-24 19:12:20,803 - INFO - spark session <pyspark.sql.session.SparkSession object at 0x000002659F3DFF10>
+2024-06-24 19:12:20,803 - INFO - ******************** Spark Session Created *************************
+2024-06-24 19:12:20,809 - INFO - Closing down clientserver connection
