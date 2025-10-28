@@ -1,7 +1,7 @@
 ##
 Welcome to the show. This endeavor aims to provide you with insights into the functioning of projects within a real-time environment.
 ##
-##
+```
 Project structure:-
 my_project/
 ├── docs/
@@ -54,5 +54,6 @@ my_project/
 │   │    ├── scratch_pad.py.py
 │   │    └── generate_csv_data.py
 
-##
+```
+
 
